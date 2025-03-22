@@ -1,0 +1,17 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    caret-color: transparent;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-size: cover; /* Ensures it covers the screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: skyblue;
+}

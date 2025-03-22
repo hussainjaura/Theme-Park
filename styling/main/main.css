@@ -1,77 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background-size: cover; /* Ensures it covers the screen */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-color: skyblue;
-}
-
-.logo {
-    width: 300px;
-    height: auto;
-    object-fit: contain;
-    object-position: center;
-}
-
-/* Navbar Styling */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    background: white;
-    border-bottom: 4px solid #2964b1;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-
-/* Brand Styling */
-.nav-brand a {
-    color: #2964b1;
-    font-size: 2rem;
-    font-family: 'Boldonse', fantasy;
-    font-weight: bold;
-}
-
-/* Nav Links Styling */
-.nav-links {
-    display: flex;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li a {
-    color: #2964b1;
-    font-size: 1.1rem;
-    padding: 8px 16px;
-    transition: all 0.3s ease;
-}
-
-.nav-links li a:hover {
-    color: white;
-    background: #2964b1;
-    border-radius: 20px;
-}
-
-/* Buttons */
-.nav-buttons {
-    display: flex;
-    gap: 10px;
-}
-
 
 .background-home-page {
     width: 100%;
@@ -299,12 +225,15 @@ body {
     font-size: 1.8rem;
     margin-bottom: 15px;
     font-family: 'Boldonse', fantasy;
+    border-bottom: 3px solid white;
+    display: inline-block; /* Makes the border fit only the width of the text */
 }
 
 .park-info-section p {
     color: #333;
     font-size: 1.1rem;
     line-height: 1.6;
+    font-family: Lato, Helvetica, Arial, sans-serif;
 }
 
 .park-info-section:hover {
@@ -400,99 +329,6 @@ body {
     }
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    padding: 60px 20px 20px;
-    margin-top: 60px;
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 40px;
-}
-
-.footer-section {
-    padding: 20px;
-}
-
-.footer-section h3 {
-    color: #2964b1;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    font-family: 'Boldonse', fantasy;
-    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-.footer-section p {
-    margin: 10px 0;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-.social-links {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #2964b1;
-}
-
-.footer-section a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    margin: 10px 0;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
-}
-
-.footer-section a:hover {
-    color: #2964b1;
-}
-
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 20px;
-    text-align: center;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .social-links {
-        align-items: center;
-    }
-
-    .footer-section h3 {
-        font-size: 1.5rem;
-    }
-
-    .footer-section p,
-    .footer-section a {
-        font-size: 1rem;
-    }
-}
-
 .park-timings-ticket-prices {
     padding: 60px 20px;
     background: skyblue;
@@ -575,29 +411,5 @@ footer {
     
     .park-timings-ticket-prices p {
         font-size: 1rem;
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .navbar {
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .nav-links li a {
-        font-size: 1rem;
-        padding: 6px 12px;
-    }
-
-    .nav-brand a {
-        font-size: 1.5rem;
     }
 }
