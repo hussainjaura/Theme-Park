@@ -1,15 +1,4 @@
 
-.background-home-page {
-    width: 100%;
-    min-block-size: 90%;
-    object-fit: cover;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    max-height: 70%;
-}
-
 .hero {
     margin-top: 90px;
     height: 750px;

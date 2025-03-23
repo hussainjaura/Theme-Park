@@ -1,0 +1,212 @@
+.park-areas {
+    width: 100%;
+    padding: 40px 0;
+    margin-top: -150px;
+}
+
+.park-areas h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2964b1;
+    font-family: 'Boldonse', fantasy;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.park-areas .sub-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.0rem;
+    color: #2964b1;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center; /* Center the text inside the p */
+    font-size: clamp(1.2rem, 1.5vw, 1.8rem);
+    position: relative; /* Ensure the ::after pseudo-element is positioned relative to the p */
+}
+  
+ .park-areas .sub-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Position the line just below the text */
+    left: 50%; /* Center the underline horizontally */
+    transform: translateX(-50%); /* Adjust position by 50% of its width to center it */
+    width: 70%; /* Set the width of the underline to be proportional to the text width */
+    height: 3px; /* Thickness of the underline */
+    background: white; /* Underline color */
+    border-radius: 2px;
+}
+
+
+
+/* Main container for cards */
+.rides-container {
+    width: 100%;
+    max-width: 1350px; /* Exactly fits 3 cards of 450px */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+
+/* Individual card styling */
+.area-card {
+    width: 450px;
+    height: 700px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(34, 34, 34, 1);
+}
+
+/* Image container */
+.card-image {
+    width: 100%;
+    height: 300px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Content area */
+.area-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.area-content h3 {
+    color: #2964b1;
+    font-size: 1.8rem;
+    font-family: 'Boldonse', fantasy;
+    margin-bottom: 15px;
+}
+
+.area-content p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.area-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.area-highlights li {
+    padding: 10px;
+    border-bottom: 1px solid rgba(41, 100, 177, 0.2);
+    color: #333;
+}
+
+.area-tip {
+    color: #2964b1;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+/* Responsive design */
+@media (max-width: 1350px) {
+    .rides-container {
+        max-width: 900px; /* Fits 2 cards */
+    }
+}
+
+@media (max-width: 900px) {
+    .rides-container {
+        max-width: 450px; /* Fits 1 card */
+    }
+}
+
+.newsletter {
+    padding: 60px 20px;
+    background: linear-gradient(rgba(41, 100, 177, 0.1), rgba(41, 100, 177, 0.2));
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    color: #2964b1;
+    font-family: 'Boldonse', fantasy;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.newsletter p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.special-experiences {
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.special-experiences h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2964b1;
+    font-family: 'Boldonse', fantasy;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.experience-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    width: 100%;
+    max-width: 1350px; /* Fits 3 cards of 450px each */
+    justify-content: center;
+}
+
+.experience-card {
+    width: 450px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.experience-card h3 {
+    color: #2964b1;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.experience-card p {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .experience-card {
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .experience-card {
+        width: 100%;
+    }
+}
