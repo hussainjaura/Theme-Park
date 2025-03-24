@@ -37,16 +37,16 @@ body {
 }
 
 .events-hero h1 {
-    color: #2964b1;
-    background-color: white;
-    font-size: 2.1rem;
+    color: white;
     margin-bottom: 1rem;
     font-family: 'Boldonse', fantasy;
-    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
     margin-top: 10rem;
     display: inline-block;
     padding: 1rem 2rem;
     border-radius: 20px;
+    font-size: 3.5rem;
+    font-family: 'Boldonse', fantasy;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .events-hero p {
@@ -104,10 +104,9 @@ body {
 
 .learn-more {
     padding: 0.8rem 1.5rem;
-    background: var(--primary-color);
+    background: #2964b1;
     color: white;
     border: none;
-    border-radius: 8px;
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -115,39 +114,13 @@ body {
 
 
 .book-button:hover {
-    background: var(--secondary-color);
+    background: #1a4677;
 }
 
 .learn-more:hover {
-    background: var(--secondary-color);
+    background: #1a4677;
 }
 
-/*
-.annual-pass-title{
-    font-family: 'Boldonse', fantasy;
-    color: #2964b1;
-    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    padding-bottom: 5px;
-    text-align: center;
-    position: relative;
-}
-
-.annual-pass-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(to right, #2964b1, #64b5f6);
-    width: 100px;
-    height: 3px;
-    border-radius: 2px;
-}
-
- */
 
 /* Event Cards */
 .seasonal-events {
