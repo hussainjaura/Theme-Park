@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
@@ -178,12 +177,181 @@ body {
     background: #1e4c8a;
 }
 
+/* ---------------------------------------------- */
+/* this is the additional info section */
+/* ---------------------------------------------- */
+
 .additional-info {
     padding: 4rem 2rem;
 }
 
+.annual-div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+} 
 
-.info-card h3{
+.annual-pass-img{
+    width: 100%;
+    max-width: 700px;
+    min-width: 300px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.annual-div p{
+    flex: 1;
+    font-size: clamp(1.1rem, 1.4vw, 1.7rem);
+    opacity: 0.9;
+    font-family: 'Nunito Sans', sans-serif;
+    color: black;
+    font-weight: 600;
+    font-style: italic;
+    max-width: 600px;
+    min-height: 500px;
+    margin: 0;
+}
+
+/* from 1177 the annual pass div is not centered any more */
+
+
+.group-div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.group-booking-img{
+    width: 100%;
+    max-width: 700px;
+    min-width: 300px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.group-div p{
+    flex: 1;
+    font-size: clamp(1.1rem, 1.4vw, 1.7rem);
+    opacity: 0.9;
+    font-family: 'Nunito Sans', sans-serif;
+    color: black;
+    font-weight: 600;
+    font-style: italic;
+    max-width: 600px;
+    min-height: 500px;
+    margin: 0;
+}
+
+.vip-div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.vip-experiences-img{
+    width: 100%;
+    max-width: 700px;
+    min-width: 300px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+.vip-div p{
+    flex: 1;
+    font-size: clamp(1.1rem, 1.4vw, 1.7rem);
+    opacity: 0.9;
+    font-family: 'Nunito Sans', sans-serif;
+    color: black;
+    font-weight: 600;
+    font-style: italic;
+    max-width: 600px;
+    min-height: 500px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 806px) {
+    .annual-div p{
+        padding-bottom: 0;
+    }
+
+    .group-div p{
+        padding-bottom: 0;
+    }
+
+    .vip-div p{
+        padding-bottom: 0;
+    }
+
+    .annual-pass-title{
+        padding: 0;
+        margin: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .group-booking-title{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .vip-experiences-title{
+        margin: 0;
+        padding: 0;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
+
+
+.annual-pass-title{
+    font-family: 'Boldonse', fantasy;
+    color: #2964b1;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.annual-pass-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #2964b1, #64b5f6);
+    width: 100px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.group-booking-title{
     font-family: 'Boldonse', fantasy;
     color: #2964b1;
     text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
@@ -193,6 +361,42 @@ body {
     padding-bottom: 5px;
     text-align: center;
 }
+
+.group-booking-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #2964b1, #64b5f6);
+    width: 100px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.vip-experiences-title{
+    font-family: 'Boldonse', fantasy;
+    color: #2964b1;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.vip-experiences-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to right, #2964b1, #64b5f6);
+    width: 100px;
+    height: 3px;
+    border-radius: 2px;
+}
+
 
 .info-card p{
     margin-top: 50px;
