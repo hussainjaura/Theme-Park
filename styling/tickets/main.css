@@ -1,0 +1,205 @@
+/* Base Styles */
+:root {
+    --primary-color: #2964b1;
+    --secondary-color: #1a4677;
+    --accent-color: #ff6b6b;
+    --text-color: #333;
+    --light-bg: #f5f7fa;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+/* Hero Section */
+.tickets-hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+}
+
+.tickets-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Boldonse', fantasy;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tickets-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Ticket Cards */
+.ticket-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.ticket-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.ticket-card:hover {
+    transform: translateY(-10px);
+}
+
+.best-value {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.ticket-card h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.price {
+    margin-bottom: 2rem;
+}
+
+.price .amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.price .period {
+    color: #666;
+    font-size: 1rem;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.features li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.features li::before {
+    content: "✓";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.buy-button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background: var(--secondary-color);
+}
+
+/* Additional Info Section */
+.additional-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem 2rem;
+    background: white;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    text-align: center;
+    max-width: 300px;
+}
+
+.info-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.learn-more {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Ticket Info Section */
+.ticket-info {
+    padding: 4rem 2rem;
+    background: var(--light-bg);
+}
+
+.ticket-info h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.info-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tickets-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .ticket-card {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .info-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
