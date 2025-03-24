@@ -1,8 +1,6 @@
 /* Base Styles */
 :root {
     --primary-color: #2964b1;
-    --secondary-color: #1a4677;
-    --accent-color: #ff6b6b;
     --text-color: #333;
     --light-bg: #f5f7fa;
 }
@@ -11,16 +9,15 @@ body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--light-bg);
-    color: var(--text-color);
+    background-color: skyblue;
 }
 
 /* Hero Section */
 .tickets-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: white;
     text-align: center;
     padding: 4rem 2rem;
+    padding-top: 12rem;
     margin-bottom: 3rem;
 }
 
@@ -36,6 +33,55 @@ body {
     opacity: 0.9;
 }
 
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 35%;
+}
+
+.background-ticket-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.ticket-start {
+    padding: 2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 100vw;
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    left: 0;
+    transform: none;
+}
+
+.ticket-start h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Boldonse', fantasy;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.664);
+}
+
+.ticket-start p {
+    width: 100%;
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-family: 'Ubuntu', sans-serif;
+    color: #353839;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+
 /* Ticket Cards */
 .ticket-options {
     display: flex;
@@ -45,6 +91,7 @@ body {
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    background-color: skyblue;
 }
 
 .ticket-card {
@@ -137,6 +184,7 @@ body {
     background: white;
     margin-top: 4rem;
     flex-wrap: wrap;
+    background-color: skyblue;
 }
 
 .info-card {
@@ -159,6 +207,7 @@ body {
 .ticket-info {
     padding: 4rem 2rem;
     background: var(--light-bg);
+    background-color: skyblue;
 }
 
 .ticket-info h2 {
@@ -201,5 +250,94 @@ body {
     .info-card {
         width: 100%;
         max-width: 400px;
+    }
+}
+
+
+.newsletter {
+    padding: 60px 20px;
+    background: linear-gradient(rgba(41, 100, 177, 0.1), rgba(41, 100, 177, 0.2));
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    color: #2964b1;
+    font-family: 'Boldonse', fantasy;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.newsletter p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.signup-form {
+    display: flex;
+    gap: 15px;
+    max-width: 600px;
+    width: 100%;
+    justify-content: center;
+}
+
+.signup-form input[type="email"] {
+    padding: 15px 20px;
+    border: 2px solid #2964b1;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.signup-form input[type="email"]:focus {
+    box-shadow: 0 0 10px rgba(41, 100, 177, 0.3);
+}
+
+.signup-form button {
+    padding: 15px 30px;
+    background-color: #2964b1;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #1e4c8a;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .signup-form {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .signup-form input[type="email"],
+    .signup-form button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .newsletter h2 {
+        font-size: 2rem;
+    }
+
+    .newsletter p {
+        font-size: 1.1rem;
+        padding: 0 20px;
     }
 }
