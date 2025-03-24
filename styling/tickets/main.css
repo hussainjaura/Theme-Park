@@ -178,33 +178,27 @@ body {
     background: #1e4c8a;
 }
 
-/* Additional Info Section */
 .additional-info {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
     padding: 4rem 2rem;
-    background: white;
-    margin-top: 4rem;
-    flex-wrap: wrap;
-    background-color: skyblue;
 }
 
-.info-card {
+
+.info-card h3{
+    font-family: 'Boldonse', fantasy;
+    color: #2964b1;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 5px;
     text-align: center;
-    max-width: 300px;
 }
 
-.info-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+.info-card p{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-.learn-more {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: bold;
-}
 
 /* Ticket Info Section */
 .ticket-info {

@@ -58,10 +58,8 @@
 .area-image {
     width: 100%;
     height: 400px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     display: block;
+    overflow: hidden;
 }   
 
 .area-image-img {
@@ -71,6 +69,11 @@
     border-radius: 0px;
     display: block;
     margin: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.area-image-img:hover {
+    transform: scale(1.05);
 }
 
 /* Content area */
