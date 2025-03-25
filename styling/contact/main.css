@@ -306,6 +306,14 @@ body {
     background: skyblue;
 }
 
+.social-connect h2{
+    color: #2964b1;
+    font-size: 1.8rem !important;
+    margin-bottom: 20px;
+    font-family: 'Boldonse', fantasy;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
+}
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -313,16 +321,68 @@ body {
     margin-top: 2rem;
 }
 
-.social-link {
+.social-link-div {
     color: var(--primary-color);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    text-align: center;
 }
 
-.social-link:hover {
+.social-link-div:hover {
     color: var(--secondary-color);
 }
+
+.social-icon {
+    width: 80px;
+    height: 80px;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-icon-twitter {
+    width: 80px;
+    height: 80px;
+    margin-left: 3rem;
+}
+
+.social-icon-twitter:hover {
+    transform: scale(1.1);
+}
+
+.social-icon-facebook {
+    width: 118px;
+    height: 80px;
+    margin-left: 1rem;
+}
+
+.social-icon-facebook:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.social-link-div a{
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 2.0rem !important;
+    padding-right: 2rem;
+}
+
+.social-link-facebook{
+    padding-right: 0 !important;
+    margin-left: 2rem;
+}
+
 
 /* Responsive Design */
 @media (max-width: 968px) {
