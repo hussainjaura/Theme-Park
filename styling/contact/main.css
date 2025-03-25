@@ -243,7 +243,6 @@ body {
 
 .faq-div {
     padding: 1rem;
-    border: 1px solid black;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -258,15 +257,25 @@ body {
     background: white;
     display: flex;
     flex-direction: row;
-    padding: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 200px;
+}
+
+.faq-item img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .faq-item-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     width: 50%;
 }
 
