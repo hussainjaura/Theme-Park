@@ -1,14 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../styling/contact/contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <img src="../logo/The Jaura’s.png" alt="logo" class="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="/">Explore</a></li>
+            <li><a href="/rides">Rides</a></li>
+            <li><a href="/tickets">Tickets</a></li>
+            <li><a href="/events">Events</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="contact-page">
+        <section class="contact-hero">
+            <div class="hero-image">
+                <img src="../images/contact/contactus.jpg" alt="contact-hero" class="contact-hero-img" loading="lazy">
+            </div>
+            <h1>Contact Us</h1>
+            <p>We're here to help make your visit magical!</p>
+        </section>
+
+        <section class="contact-grid">
+            <div class="contact-info">
+                <h2>Get in Touch With Us</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="icon">📞</div>
+                        <h3>Phone Support</h3>
+                        <p>1-800-MAGIC-PARK</p>
+                        <p>Available 24/7</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon">✉️</div>
+                        <h3>Email</h3>
+                        <p>info@magicpark.com</p>
+                        <p>Response within 24 hours</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon">💬</div>
+                        <h3>Live Chat</h3>
+                        <p>Chat with us online</p>
+                        <p>9 AM - 9 PM Daily</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon">📍</div>
+                        <h3>Mailing Address</h3>
+                        <p>123 Magic Kingdom Drive</p>
+                        <p>Adventure City, AC 12345</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h2>Send Us a Message</h2>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a topic</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="tickets">Ticket Information</option>
+                            <option value="group">Group Bookings</option>
+                            <option value="events">Special Events</option>
+                            <option value="feedback">Feedback</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <!-- add limit to text area -->
+                         <!-- add extending limit to text area -->
+                        <textarea id="message" name="message" rows="5" maxlength="200" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="location-section">
+            <h2>Visit Us</h2>
+            <div class="location-container">
+                <div class="map-container">
+                    <img src="../images/contact/park-map.jpg" alt="Park Location Map">
+                </div>
+                <div class="location-info">
+                    <h3>Park Address</h3>
+                    <p>123 Magic Kingdom Drive<br>Adventure City, AC 12345</p>
+
+                    <h3>Getting Here</h3>
+                    <ul class="transport-options">
+                        <li><strong>By Car:</strong> Free parking available</li>
+                        <li><strong>By Bus:</strong> Routes 10, 15, 20 stop at main entrance</li>
+                        <li><strong>By Train:</strong> Adventure City Station (10 min walk)</li>
+                        <li><strong>Shuttle Service:</strong> Available from major hotels</li>
+                    </ul>
+
+                    <h3>Park Hours</h3>
+                    <ul class="opening-hours">
+                        <li><strong>Monday - Thursday:</strong> 9:00 AM - 8:00 PM</li>
+                        <li><strong>Friday - Sunday:</strong> 9:00 AM - 10:00 PM</li>
+                        <li><strong>Holiday Hours:</strong> Check special schedules</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What are your operating hours?</h3>
+                    <p>We're open daily from 9 AM, with closing times varying by season. Check our calendar for specific
+                        dates.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer group discounts?</h3>
+                    <p>Yes! Special rates are available for groups of 15 or more. Contact our group sales team for
+                        details.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What's your rain policy?</h3>
+                    <p>The park remains open during light rain. Some rides may close temporarily during severe weather.
+                    </p>
+                </div>
+                <div class="faq-item">
+                    <h3>Are outside food and drinks allowed?</h3>
+                    <p>Small snacks and water bottles are permitted. No large coolers or alcoholic beverages.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="social-connect">
+            <h2>Connect With Us</h2>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for exclusive offers and updates!</p>
+            <form class="signup-form">
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Phone: (555) 123-4567</p>
+                <p>Email: info@adventurepark.com</p>
+                <p>Address: 123 Theme Park Way, Fun City, FC 12345</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="/">Facebook</a>
+                    <a href="/">Instagram</a>
+                    <a href="/">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="/">Park Map</a>
+                <a href="/">Safety Guidelines</a>
+                <a href="/">FAQs</a>
+                <a href="/">Career Opportunities</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Adventure Park. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>

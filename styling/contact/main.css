@@ -1,0 +1,377 @@
+/* Base Styles */
+:root {
+    --primary-color: #2964b1;
+    --secondary-color: #1a4677;
+    --accent-color: #ff6b6b;
+    --text-color: #333;
+    --light-bg: #f5f7fa;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: skyblue;
+    color: var(--text-color);
+}
+
+/* Hero Section */
+.contact-hero {
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 3rem;
+}
+
+.contact-hero h1 {
+    font-size: 3.5rem;
+    margin-top: 7rem;
+    margin-bottom: 1rem;
+    font-family: 'Boldonse', fantasy;
+    text-shadow: 2px 2px 0 black, 4px 4px 0 rgba(0, 0, 0, 0.2), 6px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.contact-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    text-shadow: 2px 2px 0 black, 4px 4px 0 rgba(0, 0, 0, 0.2), 6px 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 80%;
+}
+
+.contact-hero-img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    object-position: center;
+}
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    margin-top: 10rem;
+    padding-top: 1rem;
+    background-color: white;
+    border-radius: 15px; /* Rounds the corners */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Adds depth */
+}
+
+/* so  I am going to make the box white but the borders are going to be sky blue with tiny edges */
+
+/* Info Cards */
+.contact-info h2{
+    font-size: 2.1rem;
+    color: #2964b1;
+    font-family: 'Boldonse', fantasy;
+    text-shadow: 2px 2px 0 black, 3px 3px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.info-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid #2964b1;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.info-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Contact Form */
+.contact-form-container {
+    background: white;
+    padding: 2rem;
+    border: 2px solid #2964b1;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.8rem;
+    border: 2px solid #444444;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.submit-button {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background: var(--secondary-color);
+}
+
+/* Location Section */
+.location-section {
+    padding: 4rem 2rem;
+    background: skyblue;
+    margin-top: 4rem;
+}
+
+.location-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.map-container img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.location-info h3 {
+    color: var(--primary-color);
+    margin: 1.5rem 0 1rem;
+}
+
+.transport-options,
+.opening-hours {
+    list-style: none;
+    padding: 0;
+}
+
+.transport-options li,
+.opening-hours li {
+    margin: 0.8rem 0;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.faq-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Social Connect */
+.social-connect {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: skyblue;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .contact-grid,
+    .location-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid,
+    .location-container,
+    .faq-grid {
+        padding: 1rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+
+.newsletter {
+    padding: 60px 20px;
+    background: linear-gradient(rgba(41, 100, 177, 0.1), rgba(41, 100, 177, 0.2));
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter h2 {
+    font-size: 2.5rem;
+    color: #2964b1;
+    font-family: 'Boldonse', fantasy;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
+.newsletter p {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.signup-form {
+    display: flex;
+    gap: 15px;
+    max-width: 600px;
+    width: 100%;
+    justify-content: center;
+}
+
+.signup-form input[type="email"] {
+    padding: 15px 20px;
+    border: 2px solid #2964b1;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.signup-form input[type="email"]:focus {
+    box-shadow: 0 0 10px rgba(41, 100, 177, 0.3);
+}
+
+.signup-form button {
+    padding: 15px 30px;
+    background-color: #2964b1;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.signup-form button:hover {
+    background-color: #1e4c8a;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .signup-form {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .signup-form input[type="email"],
+    .signup-form button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .newsletter h2 {
+        font-size: 2rem;
+    }
+
+    .newsletter p {
+        font-size: 1.1rem;
+        padding: 0 20px;
+    }
+}
+
