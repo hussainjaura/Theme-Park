@@ -37,7 +37,7 @@
     position: relative;
     top: 15%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Offset the position to truly center it */
+    transform: translate(-50%, -50%);
     font-size: clamp(1.5rem, 5.5vw, 5rem);
     font-family: 'Boldonse', fantasy;
     text-shadow: 

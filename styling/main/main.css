@@ -16,8 +16,8 @@
     width: auto;
     font-family: 'Boldonse', fantasy;
     position: relative;
-    top: 4rem;
-    left: 3rem;
+    top: 8rem;
+    left: 8rem;
     max-width: 80%;
     word-wrap: break-word;
     text-shadow: 
@@ -28,7 +28,6 @@
 }
 
 .main-text::before {
-    content: attr(data-text);  /* This will create the overlay effect */
     position: absolute;
     left: 0;
     top: 0;
@@ -39,10 +38,10 @@
 
 .tagline-section {
     display: flex;
-    flex-direction: column;  /* Stack elements vertically */
-    align-items: center;  /* Center horizontally */
-    justify-content: center;  /* Center vertically */
-    text-align: center;  /* Center text inside */
+    flex-direction: column;  
+    align-items: center;  
+    justify-content: center;  
+    text-align: center; 
     margin-top: -50px;
 }
 
@@ -58,7 +57,7 @@
 
 .hero-buttons {
     display: flex;
-    gap: 20px; /* Space between buttons */
+    gap: 20px; 
 }
 
 .ticket-button, .rides-button {
@@ -69,7 +68,7 @@
     font-size: 1.5rem;
     font-weight: 650;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 200px; /* Fixed width so both are equal */
+    width: 200px; 
     text-align: center;
 }
 
@@ -102,7 +101,6 @@
     text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
 }
 
-/* Grid layout for attractions */
 .attractions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
@@ -113,33 +111,30 @@
     margin: 0 auto;
     max-width: 1400px;
     width: 100%;
-    place-items: center; /* Ensures cards stay centered */
+    place-items: center; 
 }
 
-/* Add this media query for the problematic breakpoint */
 @media screen and (max-width: 928px) {
     .attractions-grid {
-        grid-template-columns: 1fr; /* Force single column */
-        padding: 0 20px; /* Add some padding on sides */
+        grid-template-columns: 1fr; 
+        padding: 0 20px; 
     }
 
     .attraction-card {
-        width: 100%; /* Make cards responsive */
-        max-width: 450px; /* Maintain maximum width */
-        margin: 0 auto; /* Center the cards */
+        width: 100%; 
+        max-width: 450px; 
+        margin: 0 auto; 
     }
 }
 
-/* Add this for very small screens */
 @media screen and (max-width: 474px) {
     .attraction-card {
         width: 100%;
-        height: auto; /* Allow height to be flexible */
-        min-height: 500px; /* Minimum height */
+        height: auto; 
+        min-height: 500px; 
     }
 }
 
-/* Styling for each attraction card */
 .attraction-card {
     background: white;
     color: black;
@@ -152,26 +147,24 @@
 }
 
 .attraction-card:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05);
 }
 
-/* Image styling */
 .attraction-card img {
     width: 100%;
     display: block;
     margin: 0 auto;
     max-width: 100%;
-    height: 450px; /* Fixed height */
+    height: 450px;
     object-fit: cover;
     border-radius: 0px;
 }
 
-/* Headings inside cards */
 .attraction-card h3 {
     font-size: 1rem;
     margin: 20px 0 15px;
     font-family: 'Boldonse', fantasy;
-    color: #2964b1;  /* Your theme blue */
+    color: #2964b1; 
     text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
     position: relative;
     padding-bottom: 10px;
@@ -189,7 +182,6 @@
     border-radius: 2px;
 }
 
-/* Description text */
 .attraction-card p {
     font-size: 1.1rem;
     line-height: 1.6;
@@ -215,7 +207,7 @@
     margin-bottom: 15px;
     font-family: 'Boldonse', fantasy;
     border-bottom: 3px solid white;
-    display: inline-block; /* Makes the border fit only the width of the text */
+    display: inline-block;
 }
 
 .park-info-section p {
@@ -226,9 +218,8 @@
 }
 
 .park-info-section:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05);
 }
-
 
 .newsletter {
     padding: 60px 20px;
@@ -295,7 +286,6 @@
     transform: translateY(-2px);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .signup-form {
         flex-direction: column;
@@ -371,7 +361,6 @@
     line-height: 1.6;
 }
 
-/* Add icons for each section */
 .timings-div h3::before {
     content: "🕒";
     margin-right: 10px;
@@ -388,7 +377,6 @@
 }
 
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .park-timings-ticket-prices h2 {
         font-size: 2rem;

@@ -1,21 +1,12 @@
-/* Base Styles */
-:root {
-    --primary-color: #2964b1;
-    --secondary-color: #1a4677;
-    --accent-color: #ff6b6b;
-    --text-color: #333;
-    --light-bg: #f5f7fa;
-}
 
 body {
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
     background-color: skyblue;
-    color: var(--text-color);
+    color: #333;
 }
 
-/* Hero Section */
 .contact-hero {
     color: white;
     text-align: center;
@@ -53,7 +44,7 @@ body {
     object-fit: cover;
     object-position: center;
 }
-/* Contact Grid */
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -64,12 +55,9 @@ body {
     margin-top: 10rem;
     padding-top: 1rem;
     background-color: white;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Optional: Adds depth */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* so  I am going to make the box white but the borders are going to be sky blue with tiny edges */
-
-/* Info Cards */
 .contact-info h2{
     font-size: 2.1rem;
     color: #2964b1;
@@ -104,11 +92,10 @@ body {
 }
 
 .info-card h3 {
-    color: var(--primary-color);
+    color: #2964b1;
     margin-bottom: 1rem;
 }
 
-/* Contact Form */
 .contact-form-container {
     background: white;
     padding: 2rem;
@@ -129,7 +116,7 @@ body {
 }
 
 .form-group label {
-    color: var(--secondary-color);
+    color: #1a4677;
     font-weight: bold;
 }
 
@@ -149,12 +136,12 @@ body {
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-    border-color: var(--primary-color);
+    border-color: #2964b1;
     outline: none;
 }
 
 .submit-button {
-    background: var(--primary-color);
+    background: #2964b1;
     color: white;
     padding: 1rem;
     border: none;
@@ -165,10 +152,9 @@ body {
 }
 
 .submit-button:hover {
-    background: var(--secondary-color);
+    background: #1a4677;
 }
 
-/* Location Section */
 .location-section {
     padding: 4rem 2rem;
     background: skyblue;
@@ -219,7 +205,7 @@ body {
 
 
 .location-info h3 {
-    color: var(--primary-color);
+    color: #2964b1;
     margin: 1.5rem 0 1rem;
 }
 
@@ -234,7 +220,6 @@ body {
     margin: 0.8rem 0;
 }
 
-/* FAQ Section */
 .faq-section {
     padding: 4rem 2rem;
     max-width: 1200px;
@@ -290,16 +275,15 @@ body {
 }
 
 .faq-item h3, .faq-item p {
-    margin: 0; /* Remove margin to prevent unwanted spacing */
+    margin: 0;
 }
 
 
 .faq-item h3 {
-    color: var(--primary-color);
+    color: #2964b1;
     margin-bottom: 1rem;
 }
 
-/* Social Connect */
 .social-connect {
     text-align: center;
     padding: 4rem 2rem;
@@ -322,7 +306,7 @@ body {
 }
 
 .social-link-div {
-    color: var(--primary-color);
+    color: #2964b1;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -335,12 +319,13 @@ body {
 }
 
 .social-link-div:hover {
-    color: var(--secondary-color);
+    color: #1a4677;
 }
 
 .social-icon {
     width: 80px;
     height: 80px;
+    cursor: pointer;
 }
 
 .social-icon:hover {
@@ -351,6 +336,7 @@ body {
     width: 80px;
     height: 80px;
     margin-left: 3rem;
+    cursor: pointer;
 }
 
 .social-icon-twitter:hover {
@@ -361,6 +347,7 @@ body {
     width: 118px;
     height: 80px;
     margin-left: 1rem;
+    cursor: pointer;
 }
 
 .social-icon-facebook:hover {
@@ -372,7 +359,7 @@ body {
 
 .social-link-div a{
     text-decoration: none;
-    color: var(--primary-color);
+    color: #2964b1;
     font-weight: bold;
     font-size: 2.0rem !important;
     padding-right: 2rem;
@@ -384,7 +371,6 @@ body {
 }
 
 
-/* Responsive Design */
 @media (max-width: 968px) {
     .contact-grid,
     .location-container {
@@ -480,7 +466,6 @@ body {
     transform: translateY(-2px);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .signup-form {
         flex-direction: column;
