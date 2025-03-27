@@ -7,15 +7,15 @@
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #A1E3F9;
 }
 
 /* Hero Section */
 .faq-hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/faq/hero-bg.jpg');
+    margin-top: 150px;
     background-size: cover;
     background-position: center;
-    height: 300px;
+    height: 365px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,15 +23,41 @@ body {
     text-align: center;
     color: white;
     padding: 20px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .faq-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    color: white;
+    font-size: clamp(1.4rem, 5.3vw, 5rem);
+    font-family: 'Boldonse', fantasy;
+    text-shadow: 
+        2px 2px 0 black,
+        4px 4px 0 rgba(0,0,0,0.2),
+        6px 6px 0 rgba(0,0,0,0.1);
+    padding: 0;
+    margin: 0 auto;
 }
 
 .faq-hero p {
-    font-size: 1.2rem;
+    font-size: clamp(0.8rem, 2.5vw, 2.0rem);
+    text-shadow: 
+    2px 2px 0 black,
+    4px 4px 0 rgba(0,0,0,0.2),
+    6px 6px 0 rgba(0,0,0,0.1);
+}
+
+.faq-hero-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    max-height: 70%;
+    object-position: center;
+    object-fit: cover;
 }
 
 /* FAQ Section */
@@ -39,6 +65,7 @@ body {
     padding: 50px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 60px;
 }
 
 .faq-container {
@@ -48,7 +75,6 @@ body {
 
 .faq-item {
     background: white;
-    border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
@@ -60,8 +86,7 @@ body {
 
 .faq-question {
     position: relative;
-    padding: 20px;
-    background: #2964b1;
+    background: #205781;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -71,14 +96,13 @@ body {
 .faq-question h3 {
     font-size: 1.2rem;
     margin-right: 20px;
+    margin-left: 20px;
 }
 
 .faq-img {
-    width: 80px;
-    height: 80px;
+    width: 300px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid white;
 }
 
 .faq-answer {
@@ -108,6 +132,7 @@ body {
     .faq-question h3 {
         margin-right: 0;
         margin-bottom: 15px;
+        margin-top: 15px;
     }
 
     .faq-img {
