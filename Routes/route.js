@@ -32,6 +32,10 @@ router.get('/contact', (req, res) => {
     res.sendFile(path.join(__dirname, '../structure/contact.html'));
 });
 
+// Get the FAQ page
+router.get('/faq', (req, res) => {
+    res.sendFile(path.join(__dirname, '../structure/faq.html'));
+});
 
 export default router;
 
