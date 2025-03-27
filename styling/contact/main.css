@@ -6,7 +6,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
-    margin-top: 10rem;
+    margin-top: 5rem;
     padding-top: 1rem;
     background-color: white;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
@@ -216,6 +216,30 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     width: 50%;
+}
+
+.faq-button{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.faq-link-button{
+    background-color: white;
+    color: black;
+    width: 200px;
+    padding: 1rem;
+    border: none;
+    font-size: 1.1rem;
+    font-family: 'Boldonse', fantasy;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-link-button:hover{
+    background-color: #2964b1;
+    color: white;
 }
 
 .faq-section h2{
