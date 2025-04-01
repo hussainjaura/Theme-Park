@@ -1,66 +1,4 @@
-/* Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Ubuntu', sans-serif;
-}
 
-body {
-    background-color: #A1E3F9;
-}
-
-/* Hero Section */
-.faq-hero {
-    margin-top: 150px;
-    background-size: cover;
-    background-position: center;
-    height: 365px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.faq-hero h1 {
-    color: white;
-    font-size: clamp(1.4rem, 5.3vw, 5rem);
-    font-family: 'Boldonse', fantasy;
-    text-shadow: 
-        2px 2px 0 black,
-        4px 4px 0 rgba(0,0,0,0.2),
-        6px 6px 0 rgba(0,0,0,0.1);
-    padding: 0;
-    margin: 0 auto;
-}
-
-.faq-hero p {
-    font-size: clamp(0.8rem, 2.5vw, 2.0rem);
-    text-shadow: 
-    2px 2px 0 black,
-    4px 4px 0 rgba(0,0,0,0.2),
-    6px 6px 0 rgba(0,0,0,0.1);
-}
-
-.faq-hero-img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    max-height: 70%;
-    object-position: center;
-    object-fit: cover;
-}
-
-/* FAQ Section */
 .faq-section {
     padding: 50px 20px;
     max-width: 1200px;
@@ -114,7 +52,6 @@ body {
     color: #333;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .faq-hero h1 {
         font-size: 2rem;
@@ -141,7 +78,6 @@ body {
     }
 }
 
-/* Newsletter Section Styles */
 .newsletter {
     background: #2964b1;
     color: white;
@@ -170,7 +106,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .signup-form button:hover {
