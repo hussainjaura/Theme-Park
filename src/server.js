@@ -11,16 +11,19 @@ const __dirname = path.dirname(__filename);
 const app = express();
 const port = 3000;
 
+// to enable using forms in the html files
+app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 app.use(express.json());
+app.set('view engine', 'ejs');
 
 // Serve static files
 app.use('/structure', express.static(path.join(__dirname, '../structure')));
 app.use('/styling', express.static(path.join(__dirname, '../styling')));
 app.use('/images', express.static(path.join(__dirname, '../images')));
 app.use('/logo', express.static(path.join(__dirname, '../logo')));
-
+app.use('/views', express.static(path.join(__dirname, '../views')));
 
 app.use('/', router);
 
@@ -29,8 +32,11 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../structure/index.html'));
 });
 
+app.get('/explore-ejs', (req, res) => {
+  res.render('explore');
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-// needs owrking at the ticket page becuase prices not mentioned!!
