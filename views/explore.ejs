@@ -40,40 +40,42 @@
     </nav>
     <!-- this is the ride name section that contains the ride name and the buy tickets button -->
     <div class="ride-name">
-        <h1 class="ride-name-title">The Thunderbolt</h1>
-        <button class="ride-name-ticket">Buy Tickets - Now</button>
+        <h1 class="ride-name-title">
+            <%= explore[0].title %>
+        </h1>
+        <button class="ride-name-ticket" onclick="window.location.href='/tickets'">Buy Tickets - Now</button>
     </div>
     <!-- this is the ride image and information section that contains the ride image and the ride information -->
     <div class="content-rides">
         <div class="content-rides-img">
-            <img src="../images/rides/aaron-burden-yEv3yD8j4J8-unsplash.jpg" alt="ride-img" class="ride-img"> 
+            <img src="<%= explore[0].image_url %>" alt="ride-img" class="ride-img"> 
         </div>
         <div class="content-rides-info">
-            <h2 class="ride-description">The UK's Largest Roller Coaster</h2>
-            <p class="ride-detailed-description">Experience the thrill of our signature roller coaster with 3 loop-the-loops!</p>
-            <button class="ride-book-now">Book Now</button>
+            <h2 class="ride-description"><%= explore[0].title %></h2>
+            <p class="ride-detailed-description"><%= explore[0].description %></p>
+            <button class="ride-book-now" onclick="window.location.href='/tickets'">Book Now</button>
             
             <div class="ride-accessibility">
                 <h3 class="access-title">Accessibility Information</h3>
                 
                 <div class="access-section">
                     <h4>Mobility Requirements</h4>
-                    <p>Full upper body strength and neck control required. Guests must be able to walk 25m independently.</p>
+                    <p><%= explore[0].mobility_requirements %></p>
                 </div>
 
                 <div class="access-section">
                     <h4>Sensory Information</h4>
-                    <p>Features dark spaces, strobe lighting, and loud sound effects.</p>
+                    <p><%= explore[0].sensory_information %></p>
                 </div>
 
                 <div class="access-section">
                     <h4>Physical Requirements</h4>
-                    <p>Three complete limbs required. Prosthetics must be below elbow/knee level.</p>
+                    <p><%= explore[0].physical_requirements %></p>
                 </div>
 
                 <div class="access-section">
                     <h4>Emergency Information</h4>
-                    <p>Emergency exits include steep stairs with handrails.</p>
+                    <p><%= explore[0].emergency_information %></p>
                 </div>
             </div>
         </div>
