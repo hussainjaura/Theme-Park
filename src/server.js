@@ -3,6 +3,7 @@ import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import router from '../Routes/route.js';
+import ejsRoutes from '../Routes/ejs.js';
 
 // Get the directory name equivalent in ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -26,17 +27,13 @@ app.use('/logo', express.static(path.join(__dirname, '../logo')));
 app.use('/views', express.static(path.join(__dirname, '../views')));
 
 app.use('/', router);
+app.use('/', ejsRoutes);
 
 app.get('/', (req, res) => {
   // Send the HTML file, using path.join() to correctly resolve the file path
   res.sendFile(path.join(__dirname, '../structure/index.html'));
 });
 
-app.get('/explore-ejs', (req, res) => {
-  res.render('explore');
-});
-
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
