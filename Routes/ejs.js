@@ -20,4 +20,16 @@ ejsRoutes.get('/explore-ejs/:id', (req, res) => {
     });
 });
 
+ejsRoutes.get('/rides-ejs/:id', (req, res) => {
+    const rideId = req.params.id;
+    db.get('SELECT * FROM rides WHERE id = ?', [rideId], (err, row) => {
+        if (err) {
+            console.error('Error fetching ride:', err);
+            res.status(500).send('Error fetching ride');
+        } else {
+            res.render('rides', { rides: [row] });
+        }
+    });
+});
+
 export default ejsRoutes;
