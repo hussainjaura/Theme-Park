@@ -1,0 +1,24 @@
+# Node modules
+node_modules/
+
+# Logs
+logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# Database files (comment this out if you want to track theme.db)
+# *.db
+
+# Build output
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
