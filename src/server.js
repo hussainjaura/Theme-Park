@@ -66,3 +66,8 @@ app.post('/api/contact', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+
+// okay listen now we need to make the styling of the search results better
+// and the <li> tags are needed below every card when we search means need to extract them 
+// from the database and add them to the search results

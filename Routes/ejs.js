@@ -32,4 +32,20 @@ ejsRoutes.get('/rides-ejs/:id', (req, res) => {
     });
 });
 
+ejsRoutes.get('/api/search', (req, res) => {
+    const search = req.query.q;
+    console.log(search);
+    console.log(req.query);
+
+    db.all('SELECT * FROM rides WHERE title LIKE ?', [`%${search}%`], (err, rows) => {
+        if (err) {
+            console.error('Error searching rides:', err);
+            return res.status(500).json({ error: 'Database ran into an error' });
+        }
+
+        res.json(rows); // Send JSON, not rendered HTML
+    });
+});
+
+
 export default ejsRoutes;

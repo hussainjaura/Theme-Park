@@ -15,7 +15,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Boldonse&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <script src="../styling/rides/search.js" defer></script>
 </head>
 <body>
 
@@ -23,7 +22,7 @@
     <!-- this would be used in all pages just like newsletter and footer -->
     <nav class="navbar">
         <div class="nav-brand">
-            <img src="../logo/The Jaura's.png" alt="logo" class="logo">
+            <img src="../logo/The Jaura’s.png" alt="logo" class="logo">
         </div>
         <ul class="nav-links">
             <li><a href="/">Explore</a></li>
@@ -46,14 +45,19 @@
     <!-- this is the park areas section that contains the park rides -->
     <section class="park-areas">
         <h2>Our Amazing and Thrilling Rides!</h2>
-        <p class="sub-title">Embark on an unforgettable journey through our amazing rides and attractions at The Jaura's Theme Park!</p>
-
+        
         <div class="search-bar">
             <input type="text" placeholder="Search for a ride" id="search-input">
-            <button id="search-button">Search</button>
+            <button id="search-button" onclick="searchRides()">Search</button>
         </div>
-        
-        <div class="ride-cards-div">
+
+        <!-- a search results section would come here to render the search results as the user types -->
+        <div id="search-results" class="rides-container"></div>
+        <!-- here styling still needs to be done will display the search results as the user types
+         and hide the ride-cards-div when the user is searching -->
+
+        <!-- this is the main section that contains the ride cards -->
+        <div class="ride-cards-div" id="ride-cards-div">
             <div class="rides-container">
                 <div class="area-card" onclick="window.location.href='/rides-ejs/1'">
                     <div class="area-image">
@@ -555,5 +559,6 @@
         </div>
     </footer>
 </body>
+<script src="../app/search.js" defer></script>
 </html>
 
