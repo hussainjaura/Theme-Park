@@ -123,7 +123,32 @@
 }
 
 .search-results-div {
-    margin-top: 35px;
+    width: 100%;
+    padding: 20px;
+}
+
+.no-rides-found {
+    font-size: clamp(0.9rem, 2.0vw, 1.8rem);
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 100px;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.4);
+}
+
+.search-results-div .rides-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.search-results-div .area-card {
+    flex: 0 1 33.333%;
+    margin: 0;
+    padding: 0;
 }
 
 .area-card {

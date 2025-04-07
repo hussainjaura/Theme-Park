@@ -48,39 +48,41 @@ async function searchRides() {
     const rides = await response.json();
 
     if (rides.length === 0 || rides === null || rides === undefined) {
-      searchResults.innerHTML = "<p>No rides were found</p>";
+      searchResults.innerHTML = "<p class='no-rides-found'>Sorry! We don't have any rides that match your search at the moment.</p>";
       return;
     }
 
     searchResults.innerHTML = "";
 
+    // Create a rides container div to maintain the flex layout
+    const ridesContainer = document.createElement("div");
+    ridesContainer.classList.add("rides-container");
+
     // Display the results for each ride
     rides.forEach((ride) => {
       const rideSearchArea = document.createElement("div");
-      rideSearchArea.classList.add("ride-search-result-div");
       rideSearchArea.innerHTML = `
-        <div class="ride-cards-div" id="ride-cards-div">
-            <div class="rides-container">
-                <div class="area-card" onclick="window.location.href='/rides-ejs/${ride.id}'">
-                    <div class="area-image">
-                        <img src="${ride.image_url}" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/${ride.id}'">
-                    </div>
-                    <div class="area-content">
-                        <h3>${ride.title}</h3>
-                        <p>${ride.intro}</p>
-                        <ul class="area-highlights">
-                            <li>${ride.info1}</li>
-                            <li>${ride.info2}</li>
-                            <li>${ride.info3}</li>
-                        </ul>
-                        <p class="area-tip" style="color: #2964b1; font-style: italic;">${ride.tip}</p>
-                    </div>
-                </div>
+        <div class="area-card" onclick="window.location.href='/rides-ejs/${ride.id}'">
+            <div class="area-image">
+                <img src="${ride.image_url}" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/${ride.id}'">
+            </div>
+            <div class="area-content">
+                <h3>${ride.title}</h3>
+                <p>${ride.intro}</p>
+                <ul class="area-highlights">
+                    <li>${ride.info1}</li>
+                    <li>${ride.info2}</li>
+                    <li>${ride.info3}</li>
+                </ul>
+                <p class="area-tip" style="color: #2964b1; font-style: italic;">${ride.tip}</p>
             </div>
         </div>
-            `;
-      searchResults.appendChild(rideSearchArea);
+      `;
+      ridesContainer.appendChild(rideSearchArea);
     });
+
+    // Append the rides container to the search results
+    searchResults.appendChild(ridesContainer);
   } catch (error) {
     console.error("Error searching rides:", error);
     searchResults.innerHTML =
