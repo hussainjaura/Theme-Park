@@ -1,266 +1,566 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- this is the head section that contains the meta tags and the title and fonts imported from google fonts -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Jaura's Theme Park Events</title>
-    <link rel="stylesheet" href="../styling/events/events.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Boldonse&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" href="../styling/events/events.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boldonse&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boldonse&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Boldonse&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-
+  <body>
     <!-- this is the navigation bar that contains the logo and the navigation links -->
     <!-- this would be used in all pages just like newsletter and footer -->
     <nav class="navbar">
-        <div class="nav-brand">
-            <img src="../logo/The Jaura’s.png" alt="logo" class="logo">
-        </div>
-        <ul class="nav-links">
-            <li><a href="/">Explore</a></li>
-            <li><a href="/rides"> Rides</a></li>
-            <li><a href="/tickets">Tickets</a></li>
-            <li><a href="/events">Events</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/faq">FAQ</a></li>
-        </ul>
+      <div class="nav-brand">
+        <img src="../logo/The Jaura’s.png" alt="logo" class="logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="/">Explore</a></li>
+        <li><a href="/rides"> Rides</a></li>
+        <li><a href="/tickets">Tickets</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/faq">FAQ</a></li>
+      </ul>
     </nav>
 
     <!-- this is the main section that contains the events hero, featured event, seasonal events, special celebrations and newsletter signup -->
     <main class="events-page">
-        <section class="events-hero">
-            <h1>Special Events & Celebrations</h1>
-            <img src="../images/events/realmain.jpg" alt="background-events-image" class="background-events-image">
-        </section>
+      <section class="events-hero">
+        <h1>Special Events & Celebrations</h1>
+        <img
+          src="../images/events/realmain.jpg"
+          alt="background-events-image"
+          class="background-events-image"
+        />
+      </section>
 
-        <!-- this is the featured event section that contains the featured event card -->
-        <section class="featured-event">
-            <div class="event-content">
-                <h2>Summer Spectacular 2025</h2>
-                <p>Experience our biggest summer celebration yet with extended park hours, dazzling night shows, and
-                    exclusive performances!</p>
-                <div class="event-details">
-                    <span class="date">June 1 - August 31, 2025</span>
-                    <button class="book-button">Book Now</button>
-                </div>
-            </div>
+      <!-- this is the featured event section that contains the featured event card -->
+      <section class="featured-event">
+        <div class="event-content">
+          <h2>Summer Spectacular 2025</h2>
+          <p>
+            Experience our biggest summer celebration yet with extended park
+            hours, dazzling night shows, and exclusive performances!
+          </p>
+          <div class="event-details">
+            <span class="date">June 1 - August 31, 2025</span>
+            <button class="book-button">Book Now</button>
+          </div>
+        </div>
+        <div class="event-image">
+          <img
+            src="../images/events/realSummer.jpg"
+            alt="Summer Spectacular"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <!-- this is the seasonal events section that contains the seasonal event cards -->
+      <section class="seasonal-events">
+        <h2>Upcoming Seasonal Events</h2>
+
+        <div class="events-grid">
+          <div class="event-card spring">
             <div class="event-image">
-                <img src="../images/events/realSummer.jpg" alt="Summer Spectacular" loading="lazy">
+              <img
+                src="../images/events/spring.jpg"
+                alt="Spring Bloom Festival"
+                loading="lazy"
+              />
             </div>
-        </section>
-
-        <!-- this is the seasonal events section that contains the seasonal event cards -->
-        <section class="seasonal-events">
-            <h2>Upcoming Seasonal Events</h2>
-
-            <div class="events-grid">
-                <div class="event-card spring">
-                    <div class="event-image">
-                        <img src="../images/events/spring.jpg" alt="Spring Bloom Festival" loading="lazy">
-                    </div>
-                    <div class="event-info">
-                        <h3>Spring Bloom Festival</h3>
-                        <p>Celebrate the colors of spring with our magical garden displays, flower-themed treats, and
-                            special botanical shows. Meet our garden fairies and participate in interactive planting
-                            workshops.</p>
-                        <ul class="event-highlights">
-                            <li>Enchanted Garden Tours</li>
-                            <li>Flower Crown Making</li>
-                            <li>Spring Character Parade</li>
-                            <li>Special Spring Menu Items</li>
-                        </ul>
-                        <div class="event-footer">
-                            <span class="date">March 15 - May 1, 2025</span>
-                            <button class="learn-more">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card summer">
-                    <div class="event-image">
-                        <img src="../images/events/summer.jpg" alt="Summer Water Carnival" loading="lazy">
-                    </div>
-                    <div class="event-info">
-                        <h3>Summer Water Carnival</h3>
-                        <p>Beat the heat with our spectacular water shows, splash zones, and refreshing entertainment.
-                            Experience water-based performances and cool off in our special summer attractions.</p>
-                        <ul class="event-highlights">
-                            <li>Water Acrobatics Show</li>
-                            <li>Splash Dance Party</li>
-                            <li>Mermaid Meet & Greet</li>
-                            <li>Tropical Food Festival</li>
-                        </ul>
-                        <div class="event-footer">
-                            <span class="date">July 1 - August 31, 2025</span>
-                            <button class="learn-more">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card halloween">
-                    <div class="event-image">
-                        <img src="../images/events/halloween.jpg" alt="Halloween Nights" loading="lazy">
-                    </div>
-                    <div class="event-info">
-                        <h3>Halloween Nights</h3>
-                        <p>Experience spooky-but-friendly fun during our annual Halloween celebration. The park
-                            transforms with themed decorations, special character appearances, and not-so-scary
-                            adventures for all ages.</p>
-                        <ul class="event-highlights">
-                            <li>Trick-or-Treat Trails</li>
-                            <li>Monster Dance Party</li>
-                            <li>Costume Contests</li>
-                            <li>Themed Ride Experiences</li>
-                        </ul>
-                        <div class="event-footer">
-                            <span class="date">October 1 - 31, 2025</span>
-                            <button class="learn-more">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card winter">
-                    <div class="event-image">
-                        <img src="../images/events/winter.jpg" alt="Winter Wonderland" loading="lazy">
-                    </div>
-                    <div class="event-info">
-                        <h3>Winter Wonderland</h3>
-                        <p>Immerse yourself in a magical winter experience with snow-covered landscapes, festive shows,
-                            and holiday celebrations. Meet Santa and enjoy special seasonal treats and activities.</p>
-                        <ul class="event-highlights">
-                            <li>Santa's Workshop</li>
-                            <li>Ice Skating Show</li>
-                            <li>Holiday Light Spectacular</li>
-                            <li>Christmas Market</li>
-                        </ul>
-                        <div class="event-footer">
-                            <span class="date">December 1, 2025 - January 5, 2026</span>
-                            <button class="learn-more">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card summer-nights">
-                    <div class="event-image">
-                        <img src="../images/events/night.jpg" alt="Summer Night Festival" loading="lazy">
-                    </div>
-                    <div class="event-info">
-                        <h3>Summer Night Festival</h3>
-                        <p>Experience the magic of warm summer nights with extended evening hours, spectacular light shows, and special nighttime entertainment. The park transforms after dark with glowing attractions and magical performances.</p>
-                        <ul class="event-highlights">
-                            <li>Illuminated Parade</li>
-                            <li>Starlight Concert Series</li>
-                            <li>Glow-in-the-Dark Face Painting</li>
-                            <li>Night Ride Experiences</li>
-                        </ul>
-                        <div class="event-footer">
-                            <span class="date">July 15 - September 5, 2025</span>
-                            <button class="learn-more">Learn More</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event-card autumn-harvest">
-                    <div class="event-image">
-                        <img src="../images/events/autumn.jpg" alt="Autumn Harvest Festival" loading="lazy">
-                    </div>
-                    <div class="event-info">
-                        <h3>Autumn Harvest Festival</h3>
-                        <p>Celebrate the fall season with our special harvest festivities. Enjoy seasonal treats, autumn-themed attractions, and family-friendly activities amidst beautiful fall decorations throughout the park.</p>
-                        <ul class="event-highlights">
-                            <li>Pumpkin Carving Workshops</li>
-                            <li>Harvest Moon Night Market</li>
-                            <li>Apple Cider Tasting</li>
-                            <li>Fall Photography Sessions</li>
-                        </ul>
-                        <div class="event-footer">
-                            <span class="date">September 15 - October 31, 2025</span>
-                            <button class="learn-more">Learn More</button>
-                        </div>
-                    </div>
-                </div>
+            <div class="event-info">
+              <h3>Spring Bloom Festival</h3>
+              <p>
+                Celebrate the colors of spring with our magical garden displays,
+                flower-themed treats, and special botanical shows. Meet our
+                garden fairies and participate in interactive planting
+                workshops.
+              </p>
+              <ul class="event-highlights">
+                <li>Enchanted Garden Tours</li>
+                <li>Flower Crown Making</li>
+                <li>Spring Character Parade</li>
+                <li>Special Spring Menu Items</li>
+              </ul>
+              <div class="event-footer">
+                <span class="date">March 15 - May 1, 2025</span>
+                <button class="learn-more">Learn More</button>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!-- this is the special celebrations section that contains the special celebration cards -->
-        <section class="special-celebrations">
-            <h2>Special Celebrations</h2>
-            <div class="celebrations-grid">
-                <div class="celebration-card">
-                    <h3>Birthday Parties</h3>
-                    <p>Make your special day magical with our customized birthday packages at the jaura's theme park. Includes private party area,
-                        character visits, custom cake, and special birthday surprises.</p>
-                    <button class="special-book-button">Plan Your Party</button>
-                </div>
-
-                <div class="celebration-card">
-                    <h3>School Events</h3>
-                    <p>Educational and fun field trips with special group rates, educational programs, and dedicated
-                        guides for school groups of all ages at the jaura's theme park.</p>
-                    <button class="special-book-button">School Bookings</button>
-                </div>
-
-                <div class="celebration-card">
-                    <h3>Corporate Events</h3>
-                    <p>Unique team building experiences and corporate celebrations with exclusive venue access and
-                        customized entertainment options at the jaura's theme park.</p>
-                    <button class="special-book-button">Corporate Inquiry</button>
-                </div>
+          <div class="event-card summer">
+            <div class="event-image">
+              <img
+                src="../images/events/summer.jpg"
+                alt="Summer Water Carnival"
+                loading="lazy"
+              />
             </div>
-        </section>
-        <!-- this is the newsletter signup section that contains the newsletter signup form -->
-        <section class="newsletter">
-            <h2>Stay Updated</h2>
-            <p>Subscribe to our newsletter for exclusive offers and updates!</p>
-            <form class="signup-form">
-                <input type="email" placeholder="Enter your email">
-                <button type="submit">Subscribe</button>
-            </form>
-        </section>
+            <div class="event-info">
+              <h3>Summer Water Carnival</h3>
+              <p>
+                Beat the heat with our spectacular water shows, splash zones,
+                and refreshing entertainment. Experience water-based
+                performances and cool off in our special summer attractions.
+              </p>
+              <ul class="event-highlights">
+                <li>Water Acrobatics Show</li>
+                <li>Splash Dance Party</li>
+                <li>Mermaid Meet & Greet</li>
+                <li>Tropical Food Festival</li>
+              </ul>
+              <div class="event-footer">
+                <span class="date">July 1 - August 31, 2025</span>
+                <button class="learn-more">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-card halloween">
+            <div class="event-image">
+              <img
+                src="../images/events/halloween.jpg"
+                alt="Halloween Nights"
+                loading="lazy"
+              />
+            </div>
+            <div class="event-info">
+              <h3>Halloween Nights</h3>
+              <p>
+                Experience spooky-but-friendly fun during our annual Halloween
+                celebration. The park transforms with themed decorations,
+                special character appearances, and not-so-scary adventures for
+                all ages.
+              </p>
+              <ul class="event-highlights">
+                <li>Trick-or-Treat Trails</li>
+                <li>Monster Dance Party</li>
+                <li>Costume Contests</li>
+                <li>Themed Ride Experiences</li>
+              </ul>
+              <div class="event-footer">
+                <span class="date">October 1 - 31, 2025</span>
+                <button class="learn-more">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-card winter">
+            <div class="event-image">
+              <img
+                src="../images/events/winter.jpg"
+                alt="Winter Wonderland"
+                loading="lazy"
+              />
+            </div>
+            <div class="event-info">
+              <h3>Winter Wonderland</h3>
+              <p>
+                Immerse yourself in a magical winter experience with
+                snow-covered landscapes, festive shows, and holiday
+                celebrations. Meet Santa and enjoy special seasonal treats and
+                activities.
+              </p>
+              <ul class="event-highlights">
+                <li>Santa's Workshop</li>
+                <li>Ice Skating Show</li>
+                <li>Holiday Light Spectacular</li>
+                <li>Christmas Market</li>
+              </ul>
+              <div class="event-footer">
+                <span class="date">December 1, 2025 - January 5, 2026</span>
+                <button class="learn-more">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-card summer-nights">
+            <div class="event-image">
+              <img
+                src="../images/events/night.jpg"
+                alt="Summer Night Festival"
+                loading="lazy"
+              />
+            </div>
+            <div class="event-info">
+              <h3>Summer Night Festival</h3>
+              <p>
+                Experience the magic of warm summer nights with extended evening
+                hours, spectacular light shows, and special nighttime
+                entertainment. The park transforms after dark with glowing
+                attractions and magical performances.
+              </p>
+              <ul class="event-highlights">
+                <li>Illuminated Parade</li>
+                <li>Starlight Concert Series</li>
+                <li>Glow-in-the-Dark Face Painting</li>
+                <li>Night Ride Experiences</li>
+              </ul>
+              <div class="event-footer">
+                <span class="date">July 15 - September 5, 2025</span>
+                <button class="learn-more">Learn More</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="event-card autumn-harvest">
+            <div class="event-image">
+              <img
+                src="../images/events/autumn.jpg"
+                alt="Autumn Harvest Festival"
+                loading="lazy"
+              />
+            </div>
+            <div class="event-info">
+              <h3>Autumn Harvest Festival</h3>
+              <p>
+                Celebrate the fall season with our special harvest festivities.
+                Enjoy seasonal treats, autumn-themed attractions, and
+                family-friendly activities amidst beautiful fall decorations
+                throughout the park.
+              </p>
+              <ul class="event-highlights">
+                <li>Pumpkin Carving Workshops</li>
+                <li>Harvest Moon Night Market</li>
+                <li>Apple Cider Tasting</li>
+                <li>Fall Photography Sessions</li>
+              </ul>
+              <div class="event-footer">
+                <span class="date">September 15 - October 31, 2025</span>
+                <button class="learn-more">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- this will be the area where the previous events will be displayed -->
+      <!-- Replace the existing previous-events section with this -->
+      <section class="previous-events">
+        <h2>Previous Events</h2>
+        <div class="previous-events-div">
+          <div class="previous-event-card">
+            <div class="event-image">
+              <img
+                src="../images/events/summer.jpg"
+                alt="Summer Spectacular 2024"
+                loading="lazy"
+              />
+            </div>
+            <div class="previous-event-content">
+              <h3>Summer Spectacular 2022</h3>
+              <p>
+                Our biggest summer celebration featured extended park hours,
+                dazzling night shows, and exclusive performances that amazed
+                thousands of visitors.
+              </p>
+              <div class="event-highlights-past">
+                <span class="date">June 1 - August 31, 2022</span>
+                <span class="attendance">25,000+ Attendees</span>
+              </div>
+              <button class="view-gallery">View Gallery</button>
+            </div>
+          </div>
+
+          <div class="previous-event-card">
+            <div class="event-image">
+              <img
+                src="../images/events/night.jpg"
+                alt="Rock & Rides Festival 2024"
+                loading="lazy"
+              />
+            </div>
+            <div class="previous-event-content">
+              <h3>Rock & Rides Festival 2021</h3>
+              <p>
+                A three-day music festival featuring top rock bands, special
+                night rides, and exclusive concert-themed attractions that
+                rocked the park.
+              </p>
+              <div class="event-highlights-past">
+                <span class="date">May 15 - May 17, 2021</span>
+                <span class="attendance">30,000+ Attendees</span>
+              </div>
+              <button class="view-gallery">View Gallery</button>
+            </div>
+          </div>
+
+          <div class="previous-event-card">
+            <div class="event-image">
+              <img
+                src="../images/events/autumn.jpg"
+                alt="Diwali Lights Celebration 2023"
+                loading="lazy"
+              />
+            </div>
+            <div class="previous-event-content">
+              <h3>Diwali Lights Celebration 2020</h3>
+              <p>
+                A spectacular festival of lights featuring traditional Indian
+                performances, special light shows, and cultural food festivals.
+              </p>
+              <div class="event-highlights-past">
+                <span class="date">November 10 - November 15, 2020</span>
+                <span class="attendance">22,000+ Attendees</span>
+              </div>
+              <button class="view-gallery">View Gallery</button>
+            </div>
+          </div>
+
+          <div class="previous-event-card">
+            <div class="event-image">
+              <img
+                src="../images/events/spring.jpg"
+                alt="Easter Egg-stravaganza 2024"
+                loading="lazy"
+              />
+            </div>
+            <div class="previous-event-content">
+              <h3>Easter Egg-stravaganza 2024</h3>
+              <p>
+                A family-friendly celebration with the biggest Easter egg hunt,
+                special spring parades, and appearances by the Easter Bunny.
+              </p>
+              <div class="event-highlights-past">
+                <span class="date">April 7 - April 10, 2024</span>
+                <span class="attendance">16,000+ Attendees</span>
+              </div>
+              <button class="view-gallery">View Gallery</button>
+            </div>
+          </div>
+
+          <div class="previous-event-card">
+            <div class="event-image">
+              <img
+                src="../images/events/summer.jpg"
+                alt="Pop Stars Concert Series 2023"
+                loading="lazy"
+              />
+            </div>
+            <div class="previous-event-content">
+              <h3>Pop Stars Concert Series 2023</h3>
+              <p>
+                A month-long music festival featuring chart-topping artists,
+                special meet & greets, and exclusive backstage experiences.
+              </p>
+              <div class="event-highlights-past">
+                <span class="date">July 1 - July 31, 2023</span>
+                <span class="attendance">45,000+ Attendees</span>
+              </div>
+              <button class="view-gallery">View Gallery</button>
+            </div>
+          </div>
+
+          <div class="previous-event-card">
+            <div class="event-image">
+              <img
+                src="../images/events/winter.jpg"
+                alt="Eid Festival 2023"
+                loading="lazy"
+              />
+            </div>
+            <div class="previous-event-content">
+              <h3>Eid Festival 2019</h3>
+              <p>
+                A joyous celebration featuring traditional Middle Eastern
+                performances, special food stalls, and cultural entertainment.
+              </p>
+              <div class="event-highlights-past">
+                <span class="date">June 28 - July 2, 2019</span>
+                <span class="attendance">20,000+ Attendees</span>
+              </div>
+              <button class="view-gallery">View Gallery</button>
+            </div>
+          </div>
+
+          <div class="previous-event-card">
+            <div class="event-image">
+              <img
+                src="../images/events/night.jpg"
+                alt="New Year's Eve Spectacular 2023"
+                loading="lazy"
+              />
+            </div>
+            <div class="previous-event-content">
+              <h3>New Year's Eve Spectacular 2020</h3>
+              <p>
+                An unforgettable night of celebration with midnight fireworks,
+                special performances, and exclusive night rides.
+              </p>
+              <div class="event-highlights-past">
+                <span class="date">December 31, 2020</span>
+                <span class="attendance">35,000+ Attendees</span>
+              </div>
+              <button class="view-gallery">View Gallery</button>
+            </div>
+          </div>
+
+          <div class="previous-event-card">
+            <div class="event-image">
+              <img
+                src="../images/events/halloween.jpg"
+                alt="Halloween Nights 2024"
+                loading="lazy"
+              />
+            </div>
+            <div class="previous-event-content">
+              <h3>Halloween Nights 2019</h3>
+              <p>
+                A spooktacular celebration featuring themed decorations, special
+                character appearances, and family-friendly haunted adventures.
+              </p>
+              <div class="event-highlights-past">
+                <span class="date">October 1 - 31, 2019</span>
+                <span class="attendance">18,000+ Attendees</span>
+              </div>
+              <button class="view-gallery">View Gallery</button>
+            </div>
+          </div>
+
+          <div class="previous-event-card">
+            <div class="event-image">
+              <img
+                src="../images/events/winter.jpg"
+                alt="Winter Wonderland 2023"
+                loading="lazy"
+              />
+            </div>
+            <div class="previous-event-content">
+              <h3>Winter Wonderland 2021</h3>
+              <p>
+                A magical winter experience with snow-covered landscapes,
+                festive shows, and unforgettable holiday celebrations.
+              </p>
+              <div class="event-highlights-past">
+                <span class="date">December 1, 2021 - February 28, 2022</span>
+                <span class="attendance">20,000+ Attendees</span>
+              </div>
+              <button class="view-gallery">View Gallery</button>
+            </div>
+          </div>
+
+          <div class="previous-event-card">
+            <div class="event-image">
+              <img
+                src="../images/events/spring.jpg"
+                alt="Spring Bloom Festival 2024"
+                loading="lazy"
+              />
+            </div>
+            <div class="previous-event-content">
+              <h3>Spring Bloom Festival 2021</h3>
+              <p>
+                A celebration of spring colors featuring magical garden
+                displays, flower-themed treats, and special botanical shows.
+              </p>
+              <div class="event-highlights-past">
+                <span class="date">March 15 - May 1, 2021</span>
+                <span class="attendance">15,000+ Attendees</span>
+              </div>
+              <button class="view-gallery">View Gallery</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- this is the special celebrations section that contains the special celebration cards -->
+      <section class="special-celebrations">
+        <h2>Special Celebrations</h2>
+        <div class="celebrations-grid">
+          <div class="celebration-card">
+            <h3>Birthday Parties</h3>
+            <p>
+              Make your special day magical with our customized birthday
+              packages at the jaura's theme park. Includes private party area,
+              character visits, custom cake, and special birthday surprises.
+            </p>
+            <button class="special-book-button">Plan Your Party</button>
+          </div>
+
+          <div class="celebration-card">
+            <h3>School Events</h3>
+            <p>
+              Educational and fun field trips with special group rates,
+              educational programs, and dedicated guides for school groups of
+              all ages at the jaura's theme park.
+            </p>
+            <button class="special-book-button">School Bookings</button>
+          </div>
+
+          <div class="celebration-card">
+            <h3>Corporate Events</h3>
+            <p>
+              Unique team building experiences and corporate celebrations with
+              exclusive venue access and customized entertainment options at the
+              jaura's theme park.
+            </p>
+            <button class="special-book-button">Corporate Inquiry</button>
+          </div>
+        </div>
+      </section>
+      <!-- this is the newsletter signup section that contains the newsletter signup form -->
+      <section class="newsletter">
+        <h2>Stay Updated</h2>
+        <p>Subscribe to our newsletter for exclusive offers and updates!</p>
+        <form class="signup-form">
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
     </main>
-
 
     <!-- this is the footer section that contains the contact us, follow us and quick links -->
     <!-- this is mainly made for design purposes and would be used in all pages just like navbar and newsletter -->
     <!-- the buttons and links work but obviously the links and phone number are not real -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Phone: 0783564738</p>
-                <p>Email: thejauras@gmail.com</p> 
-                <p>Address: 123 Theme Park Way, Southampton, FC 12345</p>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-links">
-                    <a href="/">Facebook</a>
-                    <a href="/">Instagram</a>
-                    <a href="/">Twitter</a>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <a href="/">Park Map</a>
-                <a href="/">Safety Guidelines</a>
-                <a href="/">FAQs</a>
-                <a href="/">Career Opportunities</a>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Phone: 0783564738</p>
+          <p>Email: thejauras@gmail.com</p>
+          <p>Address: 123 Theme Park Way, Southampton, FC 12345</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 The Jaura's Theme Park. All rights reserved.</p>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="/">Facebook</a>
+            <a href="/">Instagram</a>
+            <a href="/">Twitter</a>
+          </div>
         </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="/">Park Map</a>
+          <a href="/">Safety Guidelines</a>
+          <a href="/">FAQs</a>
+          <a href="/">Career Opportunities</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 The Jaura's Theme Park. All rights reserved.</p>
+      </div>
     </footer>
-</body>
-
+  </body>
 </html>

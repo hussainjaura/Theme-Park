@@ -29,6 +29,7 @@ app.use('/logo', express.static(path.join(__dirname, '../logo')));
 app.use('/views', express.static(path.join(__dirname, '../views')));
 app.use('/app', express.static(path.join(__dirname, '../app')));
 app.use('/database', express.static(path.join(__dirname, '../database')));
+app.use('/favicon', express.static(path.join(__dirname, '../favicon')));
 
 app.use('/', router);
 app.use('/', ejsRoutes);
@@ -68,6 +69,32 @@ app.listen(port, () => {
 });
 
 
-// okay listen now we need to make the styling of the search results better
-// and the <li> tags are needed below every card when we search means need to extract them 
-// from the database and add them to the search results
+// next feauture that we have to work on si teh event promotion feature that is required to 
+// get the data from the database and display it on the event promotion page
+// and also make the styling of the event promotion page better
+// and make the event promotion page responsive
+// and make the event promotion page mobile friendly
+// and make the event promotion page tablet friendly
+// and make the event promotion page desktop friendly
+
+// the description:
+// Provides an additional feature that allows the park to promote the many events that 
+// they hold each year. This can vary from concerts being held on their grounds to 
+// things like Halloween scare nights.  
+// By default, the website should display this year’s events. However, the user should 
+// also be able to view what past events have occurred. 
+// The user should be able to select a year and then view the events for the given year. 
+// Additionally, the user should be able to apply filters to the listed events to narrow 
+// them down a little ‘i.e. select events categorised as concerts.’ 
+// Upon clicking a listed event, the user should be taken to a page that provides 
+// information about said event – this page should make it clear to users if the event 
+// has already occurred. 
+// o This should be fully database driven and utilise good database practice and 
+// design. 
+// o AJAX should be used extensively for this feature
+
+
+//so I already have a evenmts page that is viewing the events for this year but we need a functionality
+// where the user can select a year and view the events for the given year
+// so for that extract all the data from the database using the feautries like AJAX! and EJS!
+
