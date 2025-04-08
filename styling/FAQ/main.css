@@ -97,6 +97,7 @@
     padding: 10px;
     border: none;
     border-radius: 5px;
+    caret-color: black;
 }
 
 .signup-form button {

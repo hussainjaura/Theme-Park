@@ -1,4 +1,3 @@
-
 .ticket-start {
     padding: 2rem;
     padding-top: 4rem;
@@ -134,214 +133,70 @@
 
 .additional-info {
     padding: 4rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.annual-div{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+.info-card {
+    margin-bottom: 4rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.annual-div,
+.group-div,
+.vip-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
-    padding: 20px;
-} 
-
-.annual-pass-img{
-    width: 100%;
-    max-width: 700px;
-    min-width: 300px;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
+    padding: 2rem;
+    align-items: center;
 }
 
+.annual-pass-img,
+.group-booking-img,
+.vip-experiences-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-.annual-div p{
-    flex: 1;
-    font-size: clamp(1.1rem, 1.4vw, 1.7rem);
+.annual-div p,
+.group-div p,
+.vip-div p {
+    font-size: clamp(1rem, 1.2vw, 1.4rem);
     opacity: 0.9;
     font-family: 'Nunito Sans', sans-serif;
-    color: black;
-    font-weight: 600;
-    font-style: italic;
-    max-width: 600px;
-    min-height: 500px;
-    margin: 0;
-}
-
-.group-div{
+    color: #353839;
+    font-weight: 500;
+    line-height: 1.6;
+    padding: 1rem;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-}
-
-.group-booking-img{
-    width: 100%;
-    max-width: 700px;
-    min-width: 300px;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-    order: 2;
-}
-
-.group-div p{
-    flex: 1;
-    font-size: clamp(1.1rem, 1.4vw, 1.7rem);
-    opacity: 0.9;
-    font-family: 'Nunito Sans', sans-serif;
-    color: black;
-    font-weight: 600;
-    font-style: italic;
-    max-width: 600px;
-    min-height: 500px;
     margin: 0;
-    order: 1;
+    min-height: unset;
 }
 
-@media (max-width: 768px) {
-    .group-booking-img{
-        order: 1;
-    } 
-    
-}
-
-.vip-div{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-}
-
-.vip-experiences-img{
-    width: 100%;
-    max-width: 700px;
-    min-width: 300px;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-}
-
-.vip-div p{
-    flex: 1;
-    font-size: clamp(1.1rem, 1.4vw, 1.7rem);
-    opacity: 0.9;
-    font-family: 'Nunito Sans', sans-serif;
-    color: black;
-    font-weight: 600;
-    font-style: italic;
-    max-width: 600px;
-    min-height: 500px;
-    margin: 0;
-}
-
-@media (max-width: 768px) {
-    .info-card {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-        text-align: center;
-    }
-}
-
-@media (max-width: 806px) {
-    .annual-div p{
-        padding-bottom: 0;
-    }
-
-    .group-div p{
-        padding-bottom: 0;
-    }
-
-    .vip-div p{
-        padding-bottom: 0;
-    }
-
-    .annual-pass-title{
-        padding: 0;
-        margin: 0;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-
-    .group-booking-title{
-        margin: 0;
-        padding: 0;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-    
-    .vip-experiences-title{
-        margin: 0;
-        padding: 0;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-}
-
-
-.annual-pass-title{
+.annual-pass-title,
+.group-booking-title,
+.vip-experiences-title {
     font-family: 'Boldonse', fantasy;
     color: #2964b1;
     text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    padding-bottom: 5px;
+    font-size: 2rem;
+    margin: 2rem 0;
+    padding-bottom: 1rem;
     text-align: center;
     position: relative;
 }
 
-.annual-pass-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(to right, #2964b1, #64b5f6);
-    width: 100px;
-    height: 3px;
-    border-radius: 2px;
-}
-
-.group-booking-title{
-    font-family: 'Boldonse', fantasy;
-    color: #2964b1;
-    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    padding-bottom: 5px;
-    text-align: center;
-}
-
-.group-booking-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(to right, #2964b1, #64b5f6);
-    width: 100px;
-    height: 3px;
-    border-radius: 2px;
-}
-
-.vip-experiences-title{
-    font-family: 'Boldonse', fantasy;
-    color: #2964b1;
-    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    position: relative;
-    padding-bottom: 5px;
-    text-align: center;
-}
-
+.annual-pass-title::after,
+.group-booking-title::after,
 .vip-experiences-title::after {
     content: '';
     position: absolute;
@@ -349,17 +204,41 @@
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(to right, #2964b1, #64b5f6);
-    width: 100px;
+    width: 120px;
     height: 3px;
     border-radius: 2px;
 }
 
+@media (max-width: 900px) {
+    .annual-div,
+    .group-div,
+    .vip-div {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
 
-.info-card p{
-    margin-top: 50px;
-    margin-bottom: 50px;
+    .annual-pass-img,
+    .group-booking-img,
+    .vip-experiences-img {
+        height: 300px;
+        order: 1;
+    }
+
+    .annual-div p,
+    .group-div p,
+    .vip-div p {
+        order: 2;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .annual-pass-title,
+    .group-booking-title,
+    .vip-experiences-title {
+        font-size: 1.8rem;
+        margin: 1.5rem 0;
+    }
 }
-
 
 .ticket-info{
     padding: 4rem 2rem;
@@ -450,10 +329,12 @@
     font-size: 1rem;
     outline: none;
     transition: all 0.3s ease;
+    caret-color: black;
 }
 
 .signup-form input[type="email"]:focus {
     box-shadow: 0 0 10px rgba(41, 100, 177, 0.3);
+    caret-color: black;
 }
 
 .signup-form button {

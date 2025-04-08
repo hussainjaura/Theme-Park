@@ -132,9 +132,8 @@
     font-weight: bold;
     text-align: center;
     color: #333;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin-top: 100px;
-    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.4);
 }
 
 .search-results-div .rides-container {
@@ -278,10 +277,12 @@
     font-size: 1rem;
     outline: none;
     transition: all 0.3s ease;
+    caret-color: black;
 }
 
 .signup-form input[type="email"]:focus {
     box-shadow: 0 0 10px rgba(41, 100, 177, 0.3);
+    caret-color: black;
 }
 
 .signup-form button {
