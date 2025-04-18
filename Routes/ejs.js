@@ -48,4 +48,27 @@ ejsRoutes.get('/api/search', (req, res) => {
 });
 
 
+ejsRoutes.get('/api/events/:query', (req, res) => {
+    const query = req.params.query;
+    console.log('Fetching events for type:', query);
+    
+    // Map the dropdown values to database types
+    const typeOfEvent = {
+        'concert-series': 'concert',
+        'cultural-festival': 'cultural',
+        'seasonal-events': 'seasonal'
+    };
+    
+    const eventType = typeOfEvent[query] || query;
+    
+    db.all('SELECT * FROM events WHERE type = ?', [eventType], (err, rows) => {
+        if (err) {
+            console.error('Error fetching events:', err);
+            return res.status(500).json({ error: 'Database ran into an error' });
+        }
+        res.json(rows);
+    });
+});
+
+
 export default ejsRoutes;
