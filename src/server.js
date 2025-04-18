@@ -39,6 +39,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../structure/index.html'));
 });
 
+
 app.post('/api/contact', async (req, res) => {
   const { name, email, subject, message } = req.body;
 
@@ -63,38 +64,21 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+// 404 Page for unmatched routes
+app.use((req, res) => {
+  res.status(404).render('404', {
+      title: '404 - Page Not Found',
+      message: 'Oh-No',
+      description: 'The page you were looking for does not exist. Please check the URL or navigate back to our homepage.'
+  });
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
 
-// next feauture that we have to work on si teh event promotion feature that is required to 
-// get the data from the database and display it on the event promotion page
-// and also make the styling of the event promotion page better
-// and make the event promotion page responsive
-// and make the event promotion page mobile friendly
-// and make the event promotion page tablet friendly
-// and make the event promotion page desktop friendly
-
-// the description:
-// Provides an additional feature that allows the park to promote the many events that 
-// they hold each year. This can vary from concerts being held on their grounds to 
-// things like Halloween scare nights.  
-// By default, the website should display this year’s events. However, the user should 
-// also be able to view what past events have occurred. 
-// The user should be able to select a year and then view the events for the given year. 
-// Additionally, the user should be able to apply filters to the listed events to narrow 
-// them down a little ‘i.e. select events categorised as concerts.’ 
-// Upon clicking a listed event, the user should be taken to a page that provides 
-// information about said event – this page should make it clear to users if the event 
-// has already occurred. 
-// o This should be fully database driven and utilise good database practice and 
-// design. 
-// o AJAX should be used extensively for this feature
-
-
-//so I already have a evenmts page that is viewing the events for this year but we need a functionality
-// where the user can select a year and view the events for the given year
-// so for that extract all the data from the database using the feautries like AJAX! and EJS!
-
+// so make sure when free you make a page not found file cheers!
+// need to work on an activity as well! for js,
+// need to add year of filters on events not just category and when clicked view gallery using ejs we should be able to open that
+// page up and display whats there!
