@@ -129,10 +129,10 @@
 
 .no-rides-found {
     font-size: clamp(0.9rem, 2.0vw, 1.8rem);
-    font-weight: bold;
+    font-weight: 400;
     text-align: center;
     color: #333;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     margin-top: 100px;
 }
 

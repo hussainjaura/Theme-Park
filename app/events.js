@@ -4,10 +4,10 @@ const previousEventsCardsDiv = document.querySelector(".previous-events-cards-di
 optionButton.addEventListener("change", function() {
     const selectedValue = optionButton.value;
     if (selectedValue === "choose-event") {
-        // Clear the display if "Choose an event" is selected
-        previousEventsCardsDiv.style.display = 'block';
+        displayPreviousEvents("all"); // trigger the backend to return everything
         return;
     }
+    
     displayPreviousEvents(selectedValue);
 });
 

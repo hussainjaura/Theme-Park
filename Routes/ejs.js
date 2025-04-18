@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import db from '../database/database.js';
+import { error } from 'console';
 const ejsRoutes = express.Router();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -51,6 +52,17 @@ ejsRoutes.get('/api/search', (req, res) => {
 ejsRoutes.get('/api/events/:query', (req, res) => {
     const query = req.params.query;
     console.log('Fetching events for type:', query);
+
+    if(query === 'all'){
+        db.all('SELECT * FROM events', (err, rows)=> {
+            if(err){
+                console.log('Error fetching all events:', err);
+                return res.status(500).json({ error: 'Database ran into an error please try again' });
+            }
+            return res.json(rows);
+        });
+        return;
+    }
     
     // Map the dropdown values to database types
     const typeOfEvent = {
@@ -69,6 +81,7 @@ ejsRoutes.get('/api/events/:query', (req, res) => {
         res.json(rows);
     });
 });
+
 
 
 export default ejsRoutes;
