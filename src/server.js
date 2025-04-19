@@ -78,7 +78,10 @@ app.listen(port, () => {
 });
 
 
-// so make sure when free you make a page not found file cheers!
 // need to work on an activity as well! for js,
 // need to add year of filters on events not just category and when clicked view gallery using ejs we should be able to open that
 // page up and display whats there!
+
+// I am making spin the wheel game and sticking to it for the activity requirement!
+// so when a user wins a 10% discount or a teddy bear generate a random coupon and ask the user to
+// bring this coupon to themepark next time and then they would get a reward for this so yeah that is it!

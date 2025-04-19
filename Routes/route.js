@@ -37,5 +37,10 @@ router.get('/faq', (req, res) => {
     res.sendFile(path.join(__dirname, '../structure/faq.html'));
 });
 
+// Get the activity page
+router.get('/activity', (req, res) => {
+    res.sendFile(path.join(__dirname, '../structure/activity.html'))
+})
+
 export default router;
 

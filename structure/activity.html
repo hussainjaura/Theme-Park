@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - The Jaura's Theme Park</title>
     <link rel="stylesheet" href="../styling/contact/contact.css">
-    <link rel="stylesheet" href="../styling/ejs/404.css">
+    <link rel="stylesheet" href="../styling/activity/activity.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
@@ -33,28 +33,22 @@
         </ul>
     </nav>
 
-
-    <div class="main-text-section">
-        <h1 class="main-header"><%= title %></h1>
-            <h2 class="main-message"><%= message %></h2>
-            <p class="main-description"><%= description %></p>
-            <ul class="main-list">
-                <li>
-                    <a href="/" class="main-button"><span>Explore</span></a>
-                </li>
-                <li>
-                    <a href="/" class="main-button"><span>Rides</span></a>
-                </li>
-                <li>
-                    <a href="/" class="main-button"><span>Tickets</span></a>
-                </li>
-                <li>
-                    <a href="/" class="main-button"><span>Events</span></a>
-                </li>            
-            </ul>
-
-        <p class="main-ending">You can also use our ride search function, or view our <a href="/contact">Contact Us Page</a> to find what you're looking for.</p>
+    <div class="wheel-wrapper">
+        <div class="wheel-container">
+            <div class="spin-button">spin</div>
+            <div class="wheel">
+              <div class="number" style="--number:1;--clr:#db7093"><span class="wheel-span">100</span></div>
+              <div class="number" style="--number:2;--clr:#20b2aa"><span class="wheel-span">1</span></div>
+              <div class="number" style="--number:3;--clr:#d63e92"><span class="wheel-span">50</span></div>
+              <div class="number" style="--number:4;--clr:#daa520"><span class="wheel-span">0</span></div>
+              <div class="number" style="--number:5;--clr:#ff34f0"><span class="wheel-span">1000</span></div>
+              <div class="number" style="--number:6;--clr:#ff7f50"><span class="wheel-span">10</span></div>
+              <div class="number" style="--number:7;--clr:#3cb371"><span class="wheel-span">5</span></div>
+              <div class="number" style="--number:8;--clr:#4169e1"><span class="wheel-span">20</span></div>
+            </div>
+          </div>
     </div>
+      
     
 
     <section class="newsletter">
@@ -94,6 +88,7 @@
             <p>&copy; 2024 The Jaura's Theme Park. All rights reserved.</p>
         </div>
     </footer>
+    <script src="../app/activity.js"></script>
 
 </body>
 

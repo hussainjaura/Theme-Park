@@ -57,7 +57,13 @@
 
 .hero-buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px; 
+    justify-content: center;
+    align-items: center; 
+    margin: 0 auto;      
+    text-align: center;      
+
 }
 
 .ticket-button, .rides-button {

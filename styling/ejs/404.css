@@ -1,0 +1,73 @@
+.main-text-section {
+  margin-top: 200px;
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.main-header {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: black;
+  margin: 10px 0;
+  font-family: "Ubuntu", sans-serif;
+  font-style: italic;
+}
+
+.main-message {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.main-description {
+  font-size: 1.2rem;
+  max-width: 600px;
+  font-family: "Ubuntu", sans-serif;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.main-button {
+  margin: 0 auto;
+  width: fit-content;
+  padding: 12px 25px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-family: "Ubuntu", sans-serif;
+  list-style-type: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.main-button::before {
+  content: "\2713";
+  margin-right: 8px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.main-button:hover {
+  color: rgb(35, 35, 148);
+}
+
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.main-button span {
+  text-decoration: underline;
+}
+
+.main-list {
+  margin-bottom: 20px;
+}
+
+.main-ending {
+  margin-bottom: 40px;
+  font-family: "Ubuntu", sans-serif;
+}
