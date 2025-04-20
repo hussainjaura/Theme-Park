@@ -33,23 +33,39 @@
         </ul>
     </nav>
 
+    <div class="wheel-header">
+        <h2>Spin The Wheel</h2>
+        <p>🎉 Spin the wheel for a chance to win amazing discounts and exclusive offers! 🎉<br>
+            Every spin brings you closer to an awesome prize! Will you win 10% off or maybe even 50%? Try your luck now!
+        </p>
+    </div>
+
     <div class="wheel-wrapper">
         <div class="wheel-container">
             <div class="spin-button">spin</div>
             <div class="wheel">
-              <div class="number" style="--number:1;--clr:#db7093"><span class="wheel-span">100</span></div>
-              <div class="number" style="--number:2;--clr:#20b2aa"><span class="wheel-span">1</span></div>
-              <div class="number" style="--number:3;--clr:#d63e92"><span class="wheel-span">50</span></div>
-              <div class="number" style="--number:4;--clr:#daa520"><span class="wheel-span">0</span></div>
-              <div class="number" style="--number:5;--clr:#ff34f0"><span class="wheel-span">1000</span></div>
-              <div class="number" style="--number:6;--clr:#ff7f50"><span class="wheel-span">10</span></div>
-              <div class="number" style="--number:7;--clr:#3cb371"><span class="wheel-span">5</span></div>
-              <div class="number" style="--number:8;--clr:#4169e1"><span class="wheel-span">20</span></div>
+                <div class="number" style="--number:1;--clr:#db7093"><span class="wheel-span">10% Off</span></div>
+                <div class="number" style="--number:2;--clr:#20b2aa"><span class="wheel-span">Free Entry</span></div>
+                <div class="number" style="--number:3;--clr:#d63e92"><span class="wheel-span">50% Off</span></div>
+                <div class="number" style="--number:4;--clr:#daa520"><span class="wheel-span">20% Off</span></div>
+                <div class="number" style="--number:5;--clr:#ff34f0"><span class="wheel-span">1000 Points</span></div>
+                <div class="number" style="--number:6;--clr:#ff7f50"><span class="wheel-span">15% Off</span></div>
+                <div class="number" style="--number:7;--clr:#3cb371"><span class="wheel-span">5% Off</span></div>
+                <div class="number" style="--number:8;--clr:#4169e1"><span class="wheel-span">500 Points</span></div>
             </div>
-          </div>
+        </div>
+
+        <div id="popup" class="popup" style="display: none;">
+            <div id="popup-message" class="popup-message">
+                <p>You won: Something! 🎉</p>
+            </div>
+            <button onclick="closePopup()" class="close-button">Close</button>
+        </div>
     </div>
-      
-    
+
+    <div class="congrats-container">
+        <p class="congrats-text"></p>
+    </div>
 
     <section class="newsletter">
         <h2>Stay Updated</h2>
