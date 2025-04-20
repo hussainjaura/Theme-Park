@@ -34,6 +34,7 @@ async function displayPreviousEvents(query) {
         previousEventsCardsDiv.innerHTML = "";
 
         if (events.length === 0) {
+            console.log('No events found for query:', query);
             previousEventsCardsDiv.innerHTML = "<p class='no-events-found'>No events found for this category.</p>";
             return;
         }

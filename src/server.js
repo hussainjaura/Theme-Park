@@ -76,7 +76,3 @@ app.use((req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
-
-// need to add year of filters on events not just category and when clicked view gallery using ejs we should be able to open that
-// page up and display whats there!

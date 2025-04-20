@@ -51,14 +51,32 @@ ejsRoutes.get('/api/search', (req, res) => {
 
 ejsRoutes.get('/api/events/:query', (req, res) => {
     const query = req.params.query;
-    console.log('Fetching events for type:', query);
+    console.log('Backend received query:', query);
 
     if(query === 'all'){
+        console.log('Fetching all events');
         db.all('SELECT * FROM events', (err, rows)=> {
             if(err){
                 console.log('Error fetching all events:', err);
                 return res.status(500).json({ error: 'Database ran into an error please try again' });
             }
+            console.log('Found events:', rows);
+            return res.json(rows);
+        });
+        return;
+    }
+    
+    // Check if the query is a year (e.g., "2021-events")
+    const yearMatch = query.match(/^(\d{4})-events$/);
+    if (yearMatch) {
+        const year = yearMatch[1];
+        console.log('Fetching events for year:', year);
+        db.all('SELECT * FROM events WHERE year = ?', [year], (err, rows) => {
+            if (err) {
+                console.error('Error fetching events by year:', err);
+                return res.status(500).json({ error: 'Database ran into an error' });
+            }
+            console.log('Found events for year:', rows);
             return res.json(rows);
         });
         return;
