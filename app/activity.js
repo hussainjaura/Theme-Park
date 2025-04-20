@@ -5,7 +5,6 @@ let popupMessage = document.getElementById("popup-message");
 
 let value = 0;
 
-// Set smooth spin animation
 wheel.style.transition = "transform 4s ease-out";
 
 spinButton.onclick = () => {
@@ -23,7 +22,7 @@ spinButton.onclick = () => {
     let span = offers[offerIndex].querySelector('.wheel-span');
     let activeOffer = span.textContent;
 
-    const couponCode = generateCouponCode(); // Generate ONCE
+    const couponCode = generateCouponCode();
     showPopup(activeOffer, couponCode);
     displayCongrats(activeOffer, couponCode);
   }, 4000);

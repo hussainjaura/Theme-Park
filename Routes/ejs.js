@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import db from '../database/database.js';
-import { error } from 'console';
+
 const ejsRoutes = express.Router();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -82,6 +82,22 @@ ejsRoutes.get('/api/events/:query', (req, res) => {
     });
 });
 
+
+ejsRoutes.get('/api/events/previous/:query',(req,res) =>{
+    const query = req.params.query;
+    console.log('Rendering file for id:', query);
+    
+    db.get('SELECT * FROM prevEvents WHERE id = ?', [query], (err, row) => {
+        if (err) {
+            console.error('Error fetching event:', err);
+            res.status(500).send('Error fetching event');
+        } else if (!row) {
+            res.status(404).send('Event not found');
+        } else {
+            res.render('prevEvents', { prevEvents: row });
+        }
+    });
+})
 
 
 export default ejsRoutes;

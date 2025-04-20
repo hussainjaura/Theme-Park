@@ -1,5 +1,14 @@
 const optionButton = document.getElementById("previous-event-options");
 const previousEventsCardsDiv = document.querySelector(".previous-events-cards-div");
+const viewGalleryButtons = document.querySelectorAll('.view-gallery');
+
+viewGalleryButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        const eventCard = e.target.closest('.previous-event-card');
+        const eventId = eventCard.dataset.eventId;
+        window.location.href = `/api/events/previous/${eventId}`;
+    });
+});
 
 optionButton.addEventListener("change", function() {
     const selectedValue = optionButton.value;
@@ -32,6 +41,7 @@ async function displayPreviousEvents(query) {
         events.forEach(event => {
             const eventCard = document.createElement("div");
             eventCard.classList.add("previous-event-card");
+            eventCard.setAttribute('data-event-id', event.id);
             eventCard.innerHTML = `
                 <div class="event-image">
                     <img src="${event.image_url}" alt="${event.name}" loading="lazy">
@@ -47,6 +57,16 @@ async function displayPreviousEvents(query) {
                 </div>
             `;
             previousEventsCardsDiv.appendChild(eventCard);
+        });
+
+        // Add click handlers to the newly created buttons
+        const viewGalleryButtons = document.querySelectorAll('.view-gallery');
+        viewGalleryButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const eventCard = e.target.closest('.previous-event-card');
+                const eventId = eventCard.dataset.eventId;
+                window.location.href = `/api/events/previous/${eventId}`;
+            });
         });
     } catch (error) {
         console.error("Error fetching events:", error);
