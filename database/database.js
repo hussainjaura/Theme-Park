@@ -17,11 +17,11 @@ const db = new sqlite.Database(dbPath, (err) => {
     }
 });
 
-db.all('SELECT * FROM explore', (err, rows) => {
+db.all('SELECT * FROM attractions', (err, rows) => {
     if (err) {
         console.error('Error fetching explore:', err);
     } else {
-        console.log('explore data is fetched successfully');
+        console.log('attractions data is fetched successfully');
     }
 });
 

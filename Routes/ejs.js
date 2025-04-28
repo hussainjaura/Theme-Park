@@ -9,14 +9,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 
-ejsRoutes.get('/explore-ejs/:id', (req, res) => {
-    const exploreId = req.params.id;
-    db.get('SELECT * FROM explore WHERE id = ?', [exploreId], (err, row) => {
+ejsRoutes.get('/attractions-ejs/:id', (req, res) => {
+    const attractionsId = req.params.id;
+    db.get('SELECT * FROM attractions WHERE id = ?', [attractionsId], (err, row) => {
         if (err) {
             console.error('Error fetching ride:', err);
             res.status(500).send('Error fetching ride');
         } else {
-            res.render('explore', { explore: [row] });
+            res.render('attractions', { attractions: [row] });
         }
     });
 });

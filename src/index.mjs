@@ -82,4 +82,3 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
-// the popup for the spin the wheel isnt centered on other screens so needs fixing and must be responsive for all websites.

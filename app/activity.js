@@ -1,7 +1,7 @@
 let wheel = document.querySelector(".wheel");
 let spinButton = document.querySelector(".spin-button");
 let popup = document.getElementById("popup");
-let popupMessage = document.getElementById("popup-message");
+let popupText = document.getElementById("popup-text");
 
 let value = 0;
 
@@ -38,8 +38,8 @@ function generateCouponCode(length = 8) {
 }
 
 function showPopup(offer, couponCode) {
-  popupMessage.innerHTML = `You won: ${offer}! 🎉<br>Your Coupon: ${couponCode}`;
-  popup.style.display = 'block';
+  popupText.textContent = `You won: ${offer}! 🎉`;
+  popup.style.display = 'flex';
 }
 
 function displayCongrats(offer, couponCode) {

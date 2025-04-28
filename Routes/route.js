@@ -8,8 +8,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 //Get the explore page
-router.get('/explore', (req, res) => {
-    res.sendFile(path.join(__dirname, '../structure/explore.html'));
+router.get('/attractions', (req, res) => {
+    res.sendFile(path.join(__dirname, '../structure/attractions.html'));
 });
 
 // Get the rides page
