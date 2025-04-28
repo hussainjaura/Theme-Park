@@ -7,10 +7,6 @@ const router = express.Router();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-//Get the explore page
-router.get('/attractions', (req, res) => {
-    res.sendFile(path.join(__dirname, '../structure/attractions.html'));
-});
 
 // Get the rides page
 router.get('/rides', (req, res) => {

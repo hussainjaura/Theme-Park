@@ -57,22 +57,34 @@
 
             <div class="attractions-grid">
                 <div class="attraction-card" onclick="window.location.href='/attractions-ejs/1'">
-                    <img src="../images/rides/aaron-burden-yEv3yD8j4J8-unsplash.jpg" alt="Thunderbolt Coaster"
+                    <img src="<%= attractions[0].image_url %>" alt="Thunderbolt Coaster"
                         loading="lazy">
-                    <h3>Thunderbol Coaster</h3>
-                    <p>Experience the thrill of our signature roller coaster with 3 loop-the-loops!</p>
+                    <h3>
+                        <%= attractions[0].title %>
+                    </h3>
+                    <p>
+                        <%= attractions[0].paragraph %>
+                    </p>
                 </div>
                 <div class="attraction-card" onclick="window.location.href='/attractions-ejs/2'">
-                    <img src="../images/rides/briana-tozour-gpcZjw_cjM0-unsplash.jpg" alt="f1 roller coaster"
+                    <img src="<%= attractions[1].image_url %>" alt="f1 roller coaster"
                         loading="lazy">
-                    <h3>F1 Roller Coaster</h3>
-                    <p>Cool off on our epic f1 adventure ride with a 50-foot drop!</p>
+                    <h3>
+                        <%= attractions[1].title %>
+                    </h3>
+                    <p>
+                        <%= attractions[1].paragraph %>
+                    </p>
                 </div>
                 <div class="attraction-card" onclick="window.location.href='/attractions-ejs/3'">
-                    <img src="../images/rides/itai-aarons-PeY2eePim3Q-unsplash.jpg" alt="The Death Ride"
+                    <img src="<%= attractions[2].image_url %>" alt="The Death Ride"
                         loading="lazy">
-                    <h3>The Death Ride</h3>
-                    <p>Step into the adventurous world where near death experience come true.</p>
+                    <h3>
+                        <%= attractions[2].title %>
+                    </h3>
+                    <p>
+                        <%= attractions[2].paragraph %>
+                    </p>
                 </div>
                 <div class="park-info-section">
                     <h3>Safety First!</h3>
@@ -88,21 +100,33 @@
                 </div>
 
                 <div class="attraction-card" onclick="window.location.href='/attractions-ejs/4'">
-                    <img src="../images/rides/elizabeth-villalta-CATXxQ4ilOM-unsplash.jpg" alt="The Skyview Wheel"
+                    <img src="<%= attractions[3].image_url %>" alt="The Skyview Wheel"
                         loading="lazy">
-                    <h3>Zipper Wheel</h3>
-                    <p>Take in breathtaking views from our 200-ft tall vertical Ferris wheel.</p>
+                    <h3>
+                        <%= attractions[3].title %>
+                    </h3>
+                    <p>
+                        <%= attractions[3].paragraph %>
+                    </p>
                 </div>
                 <div class="attraction-card" onclick="window.location.href='/attractions-ejs/5'">
-                    <img src="../images/rides/ethan-hoover-zyU2gQ9mWLM-unsplash.jpg" alt="The Spinning Top"
+                    <img src="<%= attractions[4].image_url %>" alt="The Spinning Top"
                         loading="lazy">
-                    <h3>The Spinning Top</h3>
-                    <p>Embark on a swashbuckling adventure through our spinning top ride.</p>
+                    <h3>
+                        <%= attractions[4].title %>
+                    </h3>
+                    <p>
+                        <%= attractions[4].paragraph %>
+                    </p>
                 </div>
                 <div class="attraction-card" onclick="window.location.href='/attractions-ejs/6'">
-                    <img src="../images/rides/jay-wen-OfSFrs9xjO4-unsplash.jpg" alt="The Horse Ride" loading="lazy">
-                    <h3>The Horse Ride</h3>
-                    <p>Experience the thrill of riding a horse at one of our most popular rides.</p>
+                    <img src="<%= attractions[5].image_url %>" alt="The Horse Ride" loading="lazy">
+                    <h3>
+                        <%= attractions[5].title %>
+                    </h3>
+                    <p>
+                        <%= attractions[5].paragraph %>
+                    </p>
                 </div>
                 <div class="park-info-section">
                     <h3>Fast Pass Benefits</h3>
@@ -117,19 +141,29 @@
                         of your visit with this time-saving feature!</p>
                 </div>
                 <div class="attraction-card" onclick="window.location.href='/attractions-ejs/7'">
-                    <img src="../images/rides/ronny-coste-xkSl9INfi98-unsplash.jpg" alt="The Wild Safari" loading="lazy">
-                    <h3>The Mega Coaster</h3>
-                    <p>Journey through an 1800ft long mega roller coaster at jaura's theme park.</p>
+                    <img src="<%= attractions[6].image_url %>" alt="The Wild Safari" loading="lazy">
+                    <h3>
+                        <%= attractions[6].title %>
+                    </h3>
+                    <p>
+                        <%= attractions[6].paragraph %>
+                    </p>
                 </div>
                 <div class="attraction-card" onclick="window.location.href='/attractions-ejs/8'">
-                    <img src="../images/rides/rusty-watson-jlWKDeU83nw-unsplash.jpg" alt="Top Gun" loading="lazy">
-                    <h3>Top Gun</h3>
-                    <p>Dare to explore our top gun ride with dangerous loops and twists.</p>
+                    <img src="<%= attractions[7].image_url %>" alt="Top Gun" loading="lazy">
+                    <h3>
+                        <%= attractions[7].title %>
+                    </h3>
+                    <p>
+                        <%= attractions[7].paragraph %>
+                    </p>
                 </div>
                 <div class="attraction-card" onclick="window.location.href='/attractions-ejs/9'">
-                    <img src="../images/rides/soroush-karimi-epgr7D4H1Mw-unsplash.jpg" alt="The Dragon's Fury" loading="lazy">
-                    <h3>The Dragon's Fury</h3>
-                    <p>Soar through the skies on our dragon-themed spinner.</p>
+                    <img src="<%= attractions[8].image_url %>" alt="The Dragon's Fury" loading="lazy">
+                    <h3>
+                        <%= attractions[8].title %>
+                    </h3>
+                    <p><%= attractions[8].paragraph %></p>
                 </div>
                 <div class="park-info-section">
                     <h3>Dining & Refreshments</h3>

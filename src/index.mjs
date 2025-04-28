@@ -5,6 +5,7 @@ import { fileURLToPath } from "url";
 import router from "../Routes/route.js";
 import ejsRoutes from "../Routes/ejs.js";
 import contactdb from "../database/contact.js";
+import db from "../database/database.js";
 
 // Get the directory name equivalent in ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -35,8 +36,14 @@ app.use("/", router);
 app.use("/", ejsRoutes);
 
 app.get("/", (req, res) => {
-  // Send the HTML file, using path.join() to correctly resolve the file path
-  res.sendFile(path.join(__dirname, "../structure/index.html"));
+  db.all("SELECT * FROM attractions", (err, rows) => {
+    if (err) {
+      console.error("Error fetching attractions:", err);
+      res.status(500).send("Error fetching attractions");
+    } else {
+      res.render("index", { attractions: rows });
+    }
+  });
 });
 
 app.post("/api/contact", async (req, res) => {
@@ -81,4 +88,3 @@ app.use((req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-
