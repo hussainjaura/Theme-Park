@@ -38,6 +38,12 @@ body {
     height: 90%;
 }
 
+@media (max-height: 700px) {
+    .hero-image{
+        height: 150%;
+    }
+}
+
 .contact-hero-img {
     width: 100%;
     height: 80%;

@@ -321,6 +321,29 @@
     margin-bottom: 1rem;
 }
 
+@media (max-width: 600px) {
+    .faq-item {
+      flex-direction: column;
+      height: auto; 
+    }
+  
+    .faq-item img,
+    .faq-item-content {
+      width: 100%;
+      height: auto;
+    }
+  
+    .faq-item img {
+      max-height: 250px;
+      object-fit: cover;
+    }
+  
+    .faq-item-content {
+      padding: 1rem;
+    }
+  }
+  
+
 .social-connect {
     text-align: center;
     padding: 4rem 2rem;

@@ -1,4 +1,4 @@
-.navbar {
+/* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -103,5 +103,136 @@
 
     .nav-brand a {
         font-size: 1.5rem;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 923px) {
+    
+} */
+
+/* Default: For desktop (above 1024px) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: white;
+    border-bottom: 4px solid #2964b1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand a {
+    color: #2964b1;
+    font-size: 2rem;
+    font-family: 'Boldonse', fantasy;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: black;
+    font-size: 1.2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 20px;
+    font-weight: 450;
+    transition: all 0.3s ease;
+    outline: none;
+    text-decoration: none;
+}
+
+.nav-links li a:hover {
+    color: white;
+    background: #2964b1;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Medium devices: 769px to 1024px */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .navbar {
+        padding: 10px 30px;
+    }
+
+    .nav-brand a {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .nav-buttons {
+        gap: 8px;
+    }
+}
+
+/* Small devices: up to 768px */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+    .nav-brand a {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+}
+
+@media (min-width: 779px) and (max-width: 967px) {
+    .navbar {
+        flex-wrap: wrap; /* Allow it to break into two rows if needed */
+        justify-content: center;
+        padding: 15px 20px;
+    }
+
+    .nav-brand a {
+        font-size: 1.5rem; /* Slightly smaller */
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap; /* Make links wrap if too tight */
+        justify-content: center;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+        padding: 6px 10px; /* Slightly smaller padding */
+    }
+
+    .nav-buttons {
+        gap: 8px;
     }
 }

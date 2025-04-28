@@ -54,7 +54,13 @@ body {
     z-index: -1;
     top: 0;
     left: 0;
-    max-height: 70%;
+    height: 70%;
     object-position: center;
     object-fit: cover;
+}
+
+@media (max-height: 700px){
+    .faq-hero-img{
+        height: 100%;
+    }
 }
