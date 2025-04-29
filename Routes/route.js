@@ -28,14 +28,29 @@ router.get('/tickets', (req, res) => {
 
 // Get the events page
 router.get('/events', (req, res) => {
-    db.all("SELECT * FROM thisYearEvents", (err, rows) => {
+    // Fetch this year's events
+    db.all("SELECT * FROM thisYearEvents", (err, thisYearRows) => {
         if (err) {
-          console.error("Error fetching events:", err);
-          res.status(500).send("Error fetching events");
-        } else {
-          res.render("main-events", { thisYearEvents: rows });
+            console.error("Error fetching this year's events:", err);
+            res.status(500).send("Error fetching events");
+            return;
         }
-      });
+        
+        // Fetch previous events
+        db.all("SELECT * FROM prevEvents", (err, prevRows) => {
+            if (err) {
+                console.error("Error fetching previous events:", err);
+                res.status(500).send("Error fetching events");
+                return;
+            }
+            
+            // Render the template with both sets of data
+            res.render("main-events", { 
+                thisYearEvents: thisYearRows,
+                previousEvents: prevRows 
+            });
+        });
+    });
 });
 
 // Get the contact page

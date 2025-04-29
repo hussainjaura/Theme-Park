@@ -30,7 +30,7 @@
   <!-- this would be used in all pages just like newsletter and footer -->
   <nav class="navbar">
     <div class="nav-brand">
-      <img src="../logo/The_Jaura’s.png" alt="logo" class="logo">
+      <img src="../logo/The_Jaura's.png" alt="logo" class="logo">
     </div>
     <ul class="nav-links">
       <li><a href="/">Attractions</a></li>
@@ -220,12 +220,11 @@
     </section>
 
     <!-- this will be the area where the previous events will be displayed -->
-    <!-- Replace the existing previous-events section with this -->
     <section class="previous-events">
       <h2>Previous Events</h2>
       <div class="previous-events-div">
         <!-- here is the dropdown for the previous event -->
-         <div class="previous-event-dropdown-div">
+        <div class="previous-event-dropdown-div">
           <div class="previous-event-dropdown">
             <select id="previous-event-options">
               <option value="choose-event">Choose an event</option>
@@ -240,195 +239,25 @@
               <option value="2019-events">2019</option>
             </select>
           </div>
-         </div>
-         <div class="previous-events-cards-div">
-          <div class="previous-event-card" data-event-id="1">
-            <div class="event-image">
-              <img src="/images/prevEvents/pexels-sam-fire-64795-230895.jpg" alt="Summer Spectacular 2024"
-                loading="lazy">
-            </div>
-  
-            <div class="previous-event-content">
-              <h3>Summer Spectacular 2022</h3>
-              <p>
-                Our biggest summer celebration featured extended park hours,
-                dazzling night shows, and exclusive performances that amazed
-                thousands of visitors.
-              </p>
-              <div class="event-highlights-past">
-                <span class="date">June 1 - August 31, 2022</span>
-                <span class="attendance">25,000+ Attendees</span>
+        </div>
+        <div class="previous-events-cards-div">
+          <% previousEvents.forEach(event => { %>
+            <div class="previous-event-card" data-event-id="<%= event.id %>">
+              <div class="event-image">
+                <img src="<%= event.image_url %>" alt="<%= event.title %>" loading="lazy">
               </div>
-              <button class="view-gallery">View Gallery</button>
-            </div>
-          </div>
-  
-          <div class="previous-event-card" data-event-id="2">
-            <div class="event-image">
-              <img src="/images/prevEvents/pexels-rdne-6174089.jpg" alt="Rock & Rides Festival 2024" loading="lazy">
-            </div>
-            <div class="previous-event-content">
-              <h3>Rock & Rides Festival 2021</h3>
-              <p>
-                A three-day music festival featuring top rock bands, special
-                night rides, and exclusive concert-themed attractions that
-                rocked the park.
-              </p>
-              <div class="event-highlights-past">
-                <span class="date">May 15 - May 17, 2021</span>
-                <span class="attendance">30,000+ Attendees</span>
+              <div class="previous-event-content">
+                <h3><%= event.title %></h3>
+                <p><%= event.paragraph %></p>
+                <div class="event-highlights-past">
+                  <span class="date"><%= event.date %></span>
+                  <span class="attendance"><%= event.amount %>+ Attendees</span>
+                </div>
+                <button class="view-gallery">View Gallery</button>
               </div>
-              <button class="view-gallery">View Gallery</button>
             </div>
-          </div>
-  
-          <div class="previous-event-card" data-event-id="3">
-            <div class="event-image">
-              <img src="/images/prevEvents/pexels-yankrukov-8818732.jpg" alt="Diwali Lights Celebration 2023"
-                loading="lazy">
-            </div>
-            <div class="previous-event-content">
-              <h3>Diwali Lights Celebration 2020</h3>
-              <p>
-                A spectacular festival of lights featuring traditional Indian
-                performances, special light shows, and cultural food festivals.
-              </p>
-              <div class="event-highlights-past">
-                <span class="date">November 10 - November 15, 2020</span>
-                <span class="attendance">22,000+ Attendees</span>
-              </div>
-              <button class="view-gallery">View Gallery</button>
-            </div>
-          </div>
-  
-          <div class="previous-event-card" data-event-id="4">
-            <div class="event-image">
-              <img src="/images/prevEvents/pexels-rdne-7281840.jpg" alt="Easter Egg-stravaganza 2024" loading="lazy">
-            </div>
-            <div class="previous-event-content">
-              <h3>Easter Egg-stravaganza 2024</h3>
-              <p>
-                A family-friendly celebration with the biggest Easter egg hunt,
-                special spring parades, and appearances by the Easter Bunny.
-              </p>
-              <div class="event-highlights-past">
-                <span class="date">April 7 - April 10, 2024</span>
-                <span class="attendance">16,000+ Attendees</span>
-              </div>
-              <button class="view-gallery">View Gallery</button>
-            </div>
-          </div>
-  
-          <div class="previous-event-card" data-event-id="5">
-            <div class="event-image">
-              <img src="/images/prevEvents/pexels-wendywei-1540406.jpg" alt="Pop Stars Concert Series 2023"
-                loading="lazy">
-            </div>
-            <div class="previous-event-content">
-              <h3>Pop Stars Concert Series 2023</h3>
-              <p>
-                A month-long music festival featuring chart-topping artists,
-                special meet & greets, and exclusive backstage experiences.
-              </p>
-              <div class="event-highlights-past">
-                <span class="date">July 1 - July 31, 2023</span>
-                <span class="attendance">45,000+ Attendees</span>
-              </div>
-              <button class="view-gallery">View Gallery</button>
-            </div>
-          </div>
-  
-          <div class="previous-event-card" data-event-id="6">
-            <div class="event-image">
-              <img src="/images/prevEvents/pexels-rdne-7249766.jpg" alt="Eid Festival 2023" loading="lazy">
-            </div>
-            <div class="previous-event-content">
-              <h3>Eid Festival 2019</h3>
-              <p>
-                A joyous celebration featuring traditional Middle Eastern
-                performances, special food stalls, and cultural entertainment.
-              </p>
-              <div class="event-highlights-past">
-                <span class="date">June 28 - July 2, 2019</span>
-                <span class="attendance">20,000+ Attendees</span>
-              </div>
-              <button class="view-gallery">View Gallery</button>
-            </div>
-          </div>
-  
-          <div class="previous-event-card" data-event-id="7">
-            <div class="event-image">
-              <img src="/images/prevEvents/pexels-rdne-6518668.jpg" alt="New Year's Eve Spectacular 2023"
-                loading="lazy">
-            </div>
-            <div class="previous-event-content">
-              <h3>New Year's Eve Spectacular 2020</h3>
-              <p>
-                An unforgettable night of celebration with midnight fireworks,
-                special performances, and exclusive night rides.
-              </p>
-              <div class="event-highlights-past">
-                <span class="date">December 31, 2020</span>
-                <span class="attendance">35,000+ Attendees</span>
-              </div>
-              <button class="view-gallery">View Gallery</button>
-            </div>
-          </div>
-  
-          <div class="previous-event-card" data-event-id="8">
-            <div class="event-image">
-              <img src="/images/prevEvents/haloween.jpg" alt="Halloween Nights 2024" loading="lazy">
-            </div>
-            <div class="previous-event-content">
-              <h3>Halloween Nights 2019</h3>
-              <p>
-                A spooktacular celebration featuring themed decorations, special
-                character appearances, and family-friendly haunted adventures.
-              </p>
-              <div class="event-highlights-past">
-                <span class="date">October 1 - 31, 2019</span>
-                <span class="attendance">18,000+ Attendees</span>
-              </div>
-              <button class="view-gallery">View Gallery</button>
-            </div>
-          </div>
-  
-          <div class="previous-event-card" data-event-id="9">
-            <div class="event-image">
-              <img src="/images/prevEvents/winter.jpg" alt="Winter Wonderland 2023" loading="lazy">
-            </div>
-            <div class="previous-event-content">
-              <h3>Winter Wonderland 2021</h3>
-              <p>
-                A magical winter experience with snow-covered landscapes,
-                festive shows, and unforgettable holiday celebrations.
-              </p>
-              <div class="event-highlights-past">
-                <span class="date">December 1, 2021 - February 28, 2022</span>
-                <span class="attendance">20,000+ Attendees</span>
-              </div>
-              <button class="view-gallery">View Gallery</button>
-            </div>
-          </div>
-  
-          <div class="previous-event-card" data-event-id="10">
-            <div class="event-image">
-              <img src="/images/prevEvents/spring.jpg" alt="Spring Bloom Festival 2024" loading="lazy">
-            </div>
-            <div class="previous-event-content">
-              <h3>Spring Bloom Festival 2021</h3>
-              <p>
-                A celebration of spring colors featuring magical garden
-                displays, flower-themed treats, and special botanical shows.
-              </p>
-              <div class="event-highlights-past">
-                <span class="date">March 15 - May 1, 2021</span>
-                <span class="attendance">15,000+ Attendees</span>
-              </div>
-              <button class="view-gallery">View Gallery</button>
-            </div>
-          </div>
-         </div>
+          <% }) %>
+        </div>
       </div>
     </section>
 
