@@ -126,7 +126,7 @@
 }
 
 .popup-message {
-    display: absolute;
+    position: absolute;
     align-items: center;
     justify-content: center;
     height: 25vh;

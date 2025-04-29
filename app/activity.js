@@ -1,5 +1,5 @@
 let wheel = document.querySelector(".wheel");
-let spinButton = document.querySelector(".spin-button");
+let spinButton = document.querySelector(".wheel-spin-button");
 let popup = document.getElementById("popup");
 let popupText = document.getElementById("popup-text");
 

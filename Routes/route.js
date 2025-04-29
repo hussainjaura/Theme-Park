@@ -13,8 +13,8 @@ const __dirname = path.dirname(__filename);
 router.get('/rides', (req, res) => {
     db.all("SELECT * FROM rides", (err, rows) => {
         if (err) {
-          console.error("Error fetching attractions:", err);
-          res.status(500).send("Error fetching attractions");
+          console.error("Error fetching rides:", err);
+          res.status(500).send("Error fetching rides");
         } else {
           res.render("main-rides", { rides: rows });
         }
@@ -28,7 +28,14 @@ router.get('/tickets', (req, res) => {
 
 // Get the events page
 router.get('/events', (req, res) => {
-    res.sendFile(path.join(__dirname, '../structure/events.html'));
+    db.all("SELECT * FROM thisYearEvents", (err, rows) => {
+        if (err) {
+          console.error("Error fetching events:", err);
+          res.status(500).send("Error fetching events");
+        } else {
+          res.render("main-events", { thisYearEvents: rows });
+        }
+      });
 });
 
 // Get the contact page
