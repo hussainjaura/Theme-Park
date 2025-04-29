@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import db from '../database/database.js';
 
 const router = express.Router();
 
@@ -10,7 +11,14 @@ const __dirname = path.dirname(__filename);
 
 // Get the rides page
 router.get('/rides', (req, res) => {
-    res.sendFile(path.join(__dirname, '../structure/rides.html'));
+    db.all("SELECT * FROM rides", (err, rows) => {
+        if (err) {
+          console.error("Error fetching attractions:", err);
+          res.status(500).send("Error fetching attractions");
+        } else {
+          res.render("main-rides", { rides: rows });
+        }
+      });
 });
 
 // Get the tickets page

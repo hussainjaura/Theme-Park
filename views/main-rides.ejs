@@ -23,7 +23,7 @@
     <!-- this would be used in all pages just like newsletter and footer -->
     <nav class="navbar">
         <div class="nav-brand">
-            <img src="../logo/The Jaura’s.png" alt="logo" class="logo">
+            <img src="../logo/The_Jaura’s.png" alt="logo" class="logo">
         </div>
         <ul class="nav-links">
             <li><a href="/">Attractions</a></li>
@@ -62,11 +62,15 @@
             <div class="rides-container">
                 <div class="area-card" onclick="window.location.href='/rides-ejs/1'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride1.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/1'">
+                        <img src="<%= rides[0].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/1'">
                     </div>
                     <div class="area-content">
-                        <h3>The Thunderbolt</h3>
-                        <p>Experience the ultimate adrenaline rush on our signature steel roller spinner with five inversions and a 90-degree drop!</p>
+                        <h3>
+                            <%= rides[0].title %>
+                        </h3>
+                        <p>
+                            <%= rides[0].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Maximum drop: 90 degrees</li>
                             <li>Track length: 500 meters</li>
@@ -78,11 +82,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/2'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride2.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/2'">
+                        <img src="<%= rides[1].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/2'">
                     </div>
                     <div class="area-content">
-                        <h3>Dragon's Fury</h3>
-                        <p>Soar through the skies on this suspended dragon ride that mimics the flight of a dragon through medieval ruins.</p>
+                        <h3>
+                            <%= rides[1].title %>
+                        </h3>
+                        <p>
+                            <%= rides[1].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Height: 45 meters high</li>
                             <li>Special Effects: Fire and mist</li>
@@ -94,11 +102,15 @@
         
                 <div class="area-card" onclick="window.location.href='/rides-ejs/3'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride3.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/3'">
+                        <img src="<%= rides[2].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/3'">
                     </div>
                     <div class="area-content">
-                        <h3>Air Wave Rush</h3>
-                        <p>Get ready to be soaked on this thrilling speedy coaster combining high-speed drops with refreshing splashes of air.</p>
+                        <h3>
+                            <%= rides[2].title %>
+                        </h3>
+                        <p>
+                            <%= rides[2].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Drop height: 30 meters</li>
                             <li>Splash zone: Guaranteed!</li>
@@ -110,11 +122,15 @@
         
                 <div class="area-card" onclick="window.location.href='/rides-ejs/4'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride4.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/4'">
+                        <img src="<%= rides[3].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/4'">
                     </div>
                     <div class="area-content">
-                        <h3>Cosmic Orbiter</h3>
-                        <p>Launch into sky on this train looking like a rocket coaster with interactive LED effects and zero-gravity sensations.</p>
+                        <h3>
+                            <%= rides[3].title %>
+                        </h3>
+                        <p>
+                            <%= rides[3].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Rotation: 360-degree spins</li>
                             <li>G-Force: Up to 3.5G</li>
@@ -126,11 +142,15 @@
         
                 <div class="area-card" onclick="window.location.href='/rides-ejs/5'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride5.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/5'">
+                        <img src="<%= rides[4].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/5'">
                     </div>
                     <div class="area-content">
-                        <h3>Caterpillar's Ride</h3>
-                        <p>Navigate through wild rapids and waterfalls in this exciting river raft adventure through dense rainforest.</p>
+                        <h3>
+                            <%= rides[4].title %>
+                        </h3>
+                        <p>
+                            <%= rides[4].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Rapids Level: Class III</li>
                             <li>Journey Time: 8 minutes</li>
@@ -142,11 +162,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/6'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride6.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/6'">
+                        <img src="<%= rides[5].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/6'">
                     </div>
                     <div class="area-content">
-                        <h3>Stellar Launch</h3>
-                        <p>Blast off into the cosmos on this high-tech space spinner with real-time motion controls and stellar visuals.</p>
+                        <h3>
+                            <%= rides[5].title %>
+                        </h3>
+                        <p>
+                            <%= rides[5].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>G-Force: Up to 3G</li>
                             <li>Flight Duration: 2.5 minutes</li>
@@ -158,11 +182,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/7'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride7.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/7'">
+                        <img src="<%= rides[6].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/7'">
                     </div>
                     <div class="area-content">
-                        <h3>Upside Down Fury</h3>
-                        <p>Embark on an epic aerial adventure aboard this suspended coaster through the skies</p>
+                        <h3>
+                            <%= rides[6].title %>
+                        </h3>
+                        <p>
+                            <%= rides[6].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Track Length: 950 meters</li>
                             <li>Maximum Height: 40 meters</li>
@@ -174,11 +202,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/8'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride8.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/8'">
+                        <img src="<%= rides[7].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/8'">
                     </div>
                     <div class="area-content">
-                        <h3>Free Fall</h3>
-                        <p>Live your wildest dreams on this thrilling free fall ride that will take you to the skies.</p>
+                        <h3>
+                            <%= rides[7].title %>
+                        </h3>
+                        <p>
+                            <%= rides[7].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Journey Time: 15 minutes</li>
                             <li>Ride Height: 1400 meters</li>
@@ -190,11 +222,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/9'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride9.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/9'">
+                        <img src="<%= rides[8].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/9'">
                     </div>
                     <div class="area-content">
-                        <h3>Colorful Ferris Wheel</h3>
-                        <p>Travel through the skies on this colorful ferris wheel that will take you to the skies.</p>
+                        <h3>
+                            <%= rides[8].title %>
+                        </h3>
+                        <p>
+                            <%= rides[8].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Experience Duration: 6 minutes</li>
                             <li>Motion Platform: 360° rotation</li>
@@ -206,11 +242,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/10'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride10.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/10'">
+                        <img src="<%= rides[9].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/10'">
                     </div>
                     <div class="area-content">
-                        <h3>Star Blaster</h3>
-                        <p>A ride that will take you to the stars.</p>
+                        <h3>
+                            <%= rides[9].title %>
+                        </h3>
+                        <p>
+                            <%= rides[9].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Ride Duration: 9.4 minutes</li>
                             <li>Coverage Range: 15 meters</li>
@@ -222,11 +262,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/11'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride25.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/11'">
+                        <img src="<%= rides[10].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/11'">
                     </div>
                     <div class="area-content">
-                        <h3>KrustyLand</h3>
-                        <p>Enjoy the fun of different rides in this fun land.</p>
+                        <h3>
+                            <%= rides[10].title %>
+                        </h3>
+                        <p>
+                            <%= rides[10].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Ride Durations: 10 minutes</li>
                             <li>Ride Count: 9</li>
@@ -238,11 +282,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/12'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride11.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/12'">
+                        <img src="<%= rides[11].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/12'">
                     </div>
                     <div class="area-content">
-                        <h3>Knight's Revenge</h3>
-                        <p>Battle through this intense medieval-themed coaster featuring sword effects and dizzying drops.</p>
+                        <h3>
+                            <%= rides[11].title %>
+                        </h3>
+                        <p>
+                            <%= rides[11].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Track Length: 850 meters</li>
                             <li>Speed: 95 km/h max</li>
@@ -254,11 +302,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/13'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride12.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/13'">
+                        <img src="<%= rides[12].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/13'">
                     </div>
                     <div class="area-content">
-                        <h3>The Dog's Run</h3>
-                        <p>A ride with amazing twists and turns. Best for kids and adults alike!</p>
+                        <h3>
+                            <%= rides[12].title %>
+                        </h3>
+                        <p>
+                            <%= rides[12].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Ride Length: 12 minutes</li>
                             <li>Drop Height: 25 meters</li>
@@ -270,11 +322,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/14'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride13.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/14'">
+                        <img src="<%= rides[13].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/14'">
                     </div>
                     <div class="area-content">
-                        <h3>Wild Vikings Ride</h3>
-                        <p>Navigate through this wild water ride featuring steep drops, jungle mists, and animatronic wildlife.
+                        <h3>
+                            <%= rides[13].title %>
+                        </h3>
+                        <p>
+                            <%= rides[13].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Rotation: Multi-directional</li>
                             <li>Duration: 7.9 minutes</li>
@@ -286,11 +342,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/15'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride14.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/15'">
+                        <img src="<%= rides[14].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/15'">
                     </div>
                     <div class="area-content">
-                        <h3>Rockey Mountain</h3>
-                        <p>A moderate ride with amazing Scenery of the mountains. Recommended for Mountain lovers!</p>
+                        <h3>
+                            <%= rides[14].title %>
+                        </h3>
+                        <p>
+                            <%= rides[14].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Ride Duration: 10.5 minutes</li>
                             <li>Height: 22 meters</li>
@@ -302,11 +362,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/16'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride15.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/16'">
+                        <img src="<%= rides[15].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/16'">
                     </div>
                     <div class="area-content">
-                        <h3>Toy Story Ride</h3>
-                        <p>A magical twist on the classic toys featuring Woody and Buzz Lightyear and enchanted music.</p>
+                        <h3>
+                            <%= rides[15].title %>
+                        </h3>
+                        <p>
+                            <%= rides[15].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Ride Duration: 5.7 minutes</li>
                             <li>Characters: 7 unique mounts</li>
@@ -318,11 +382,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/17'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride16.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/17'">
+                        <img src="<%= rides[16].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/17'">
                     </div>
                     <div class="area-content">
-                        <h3>Railway Express</h3>
-                        <p>Race through ancient caves and dry landscapes on this high-speed bobsled coaster.</p>
+                        <h3>
+                            <%= rides[16].title %>
+                        </h3>
+                        <p>
+                            <%= rides[16].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Ride Duration: 3.5 minutes</li>
                             <li>Speed: 85 km/h</li>
@@ -334,11 +402,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/18'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride17.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/18'">
+                        <img src="<%= rides[17].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/18'">
                     </div>
                     <div class="area-content">
-                        <h3>The Candy Cane Roller</h3>
-                        <p>Speed through this sweet-themed rolling coaster with interactive candy-themed elements.</p>
+                        <h3>
+                            <%= rides[17].title %>
+                        </h3>
+                        <p>
+                            <%= rides[17].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Ride Duration: 4.5 minutes</li>
                             <li>Speed: 65 km/h</li>
@@ -350,11 +422,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/19'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride18.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/19'">
+                        <img src="<%= rides[18].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/19'">
                     </div>
                     <div class="area-content">
-                        <h3>The Fighter Jet Spin</h3>
-                        <p>Experience this next-gen fighter jet spinning ride with virtual reality enhancement and digital effects.</p>
+                        <h3>
+                            <%= rides[18].title %>
+                        </h3>
+                        <p>
+                            <%= rides[18].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Ride Duration: 3.5 minutes</li>
                             <li>Spin Rate: Variable</li>
@@ -366,11 +442,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/20'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride19.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/20'">
+                        <img src="<%= rides[19].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/20'">
                     </div>
                     <div class="area-content">
-                        <h3>Water Splash</h3>
-                        <p>Plunge into the depths of the water with this water splash ride.</p>
+                        <h3>
+                            <%= rides[19].title %>
+                        </h3>
+                        <p>
+                            <%= rides[19].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Ride Area: Water Park</li>
                             <li>Ride Duration: 9 minutes</li>
@@ -382,11 +462,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/21'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride20.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/21'">
+                        <img src="<%= rides[20].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/21'">
                     </div>
                     <div class="area-content">
-                        <h3>The Rolling Beast</h3>
-                        <p>Race through the rolling beast with breathtaking views of the park.</p>
+                        <h3>
+                            <%= rides[20].title %>
+                        </h3>
+                        <p>
+                            <%= rides[20].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Ride Duration: 4 minutes</li>
                             <li>Ride Area: Main Park</li>
@@ -398,11 +482,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/22'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride21.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/22'">
+                        <img src="<%= rides[21].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/22'">
                     </div>
                     <div class="area-content">
-                        <h3>Superhero Flight</h3>
-                        <p>Soar like a superhero on this flying coaster with zero-gravity sensations.</p>
+                        <h3>
+                            <%= rides[21].title %>
+                        </h3>
+                        <p>
+                            <%= rides[21].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Position: upside down loops</li>
                             <li>Ride Capacity: 28 riders</li>
@@ -414,11 +502,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/23'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride22.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/23'">
+                        <img src="<%= rides[22].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/23'">
                     </div>
                     <div class="area-content">
-                        <h3>The Final Destination</h3>
-                        <p>Experience the thrill of a lifetime on upside down looper with a 360 degree view of the park.</p>
+                        <h3>
+                            <%= rides[22].title %>
+                        </h3>
+                        <p>
+                            <%= rides[22].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Ride Duration: 7.5 minutes</li>
                             <li>Ride Area: Entry Point</li>
@@ -430,11 +522,15 @@
     
                 <div class="area-card" onclick="window.location.href='/rides-ejs/24'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride23.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/24'">
+                        <img src="<%= rides[23].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/24'">
                     </div>
                     <div class="area-content">
-                        <h3>Robotic Blast</h3>
-                        <p>Experience the thrill of a lifetime on this robotic blast ride with a speed of 75 km/h.</p>
+                        <h3>
+                            <%= rides[23].title %>
+                        </h3>
+                        <p>
+                            <%= rides[23].paragraph %>
+                        </p>
                         <ul class="area-highlights">
                             <li>Ride Duration: 10 minutes</li>
                             <li>Speed: 75 km/h</li>
@@ -446,48 +542,62 @@
             
                 <div class="area-card" onclick="window.location.href='/rides-ejs/25'">
                     <div class="area-image">
-                        <img src="../images/newRides/ride24.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/25'">
+                        <img src="<%= rides[24].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/25'">
                     </div>
-                <div class="area-content">
-                        <h3>Enchanted Flight</h3>
-                        <p>Glide through magical scenes on this family-friendly suspended coaster.</p>
-                    <ul class="area-highlights">
+                    <div class="area-content">
+                        <h3>
+                            <%= rides[24].title %>
+                        </h3>
+                        <p>
+                            <%= rides[24].paragraph %>
+                        </p>
+                        <ul class="area-highlights">
                             <li>Height: 110 meters</li>
                             <li>Speed: 45 km/h</li>
                             <li>Duration: 5 minutes</li>
-                    </ul>
+                        </ul>
                         <p class="area-tip" style="color: #2964b1; font-style: italic;">Tip: Perfect for first-time riders!</p>
+                    </div>
                 </div>
-            </div>
-            <div class="area-card" onclick="window.location.href='/rides-ejs/26'">
-                <div class="area-image">
-                    <img src="../images/newRides/ride27.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/26'">
+    
+                <div class="area-card" onclick="window.location.href='/rides-ejs/26'">
+                    <div class="area-image">
+                        <img src="<%= rides[25].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/26'">
+                    </div>
+                    <div class="area-content">
+                        <h3>
+                            <%= rides[25].title %>
+                        </h3>
+                        <p>
+                            <%= rides[25].paragraph %>
+                        </p>
+                        <ul class="area-highlights">
+                            <li>Arena Size: 400 square meters</li>
+                            <li>Ride Duration: 5 minutes</li>
+                            <li>Special Features: Interactive scoring</li>
+                        </ul>
+                        <p class="area-tip" style="color: #2964b1; font-style: italic;">Tip: Watch out for bumps and crashes!</p>
+                    </div>
                 </div>
-                <div class="area-content">
-                    <h3>Bumper Cars</h3>
-                    <p>Challenge your friends in these high-tech bumper cars featuring LED effects and electronic scoring system.</p>
-                    <ul class="area-highlights">
-                        <li>Arena Size: 400 square meters</li>
-                        <li>Ride Duration: 5 minutes</li>
-                        <li>Special Features: Interactive scoring</li>
-                    </ul>
-                    <p class="area-tip" style="color: #2964b1; font-style: italic;">Tip: Watch out for bumps and crashes!</p>
-                </div>
-            </div>
             
-            <div class="area-card" onclick="window.location.href='/rides-ejs/27'">
-                <div class="area-image">
-                    <img src="../images/newRides/ride26.jpg" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/27'">
-                </div>
-                <div class="area-content">
-                    <h3>Tsunami Splash</h3>
-                    <p>Brave the massive waves in this dynamic water ride featuring a 40-foot plunge and swirling rapids.</p>
-                    <ul class="area-highlights">
-                        <li>Drop Height: 12 meters</li>
-                        <li>Ride Duration: 8 minutes</li>
-                        <li>Splash Zone: Extreme soaking</li>
-                    </ul>
-                    <p class="area-tip" style="color: #2964b1; font-style: italic;">Tip: Bring extra clothes - you will get completely wet!</p>
+                <div class="area-card" onclick="window.location.href='/rides-ejs/27'">
+                    <div class="area-image">
+                        <img src="<%= rides[26].image_url %>" alt="ride-image" class="area-image-img" loading="lazy" onclick="window.location.href='/rides-ejs/27'">
+                    </div>
+                    <div class="area-content">
+                        <h3>
+                            <%= rides[26].title %>
+                        </h3>
+                        <p>
+                            <%= rides[26].paragraph %>
+                        </p>
+                        <ul class="area-highlights">
+                            <li>Drop Height: 12 meters</li>
+                            <li>Ride Duration: 8 minutes</li>
+                            <li>Splash Zone: Extreme soaking</li>
+                        </ul>
+                        <p class="area-tip" style="color: #2964b1; font-style: italic;">Tip: Bring extra clothes - you will get completely wet!</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -559,7 +669,7 @@
             <p>&copy; 2024 The Jaura's Theme Park. All rights reserved.</p>
         </div>
     </footer>
+    <script src="../app/search.js" defer></script>
 </body>
-<script src="../app/search.js" defer></script>
 </html>
 
