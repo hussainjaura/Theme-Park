@@ -2,8 +2,8 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
-import router from "../Routes/route.js";   
-import ejsRoutes from "../Routes/ejs.js"; 
+import router from "../Routes/route.js";
+import ejsRoutes from "../Routes/ejs.js";
 import contactdb from "../database/contact.js";
 import db from "../database/database.js";
 
@@ -44,7 +44,7 @@ app.use("/", ejsRoutes);
 app.get("/", (req, res) => {
   db.all("SELECT * FROM attractions", (err, rows) => {
     if (err) {
-      console.error("Error fetching attractions:", err);
+      console.error("Error fetching attractions");
       res.status(500).send("Error fetching attractions");
     } else {
       // pass data to ejs to display
@@ -68,7 +68,7 @@ app.post("/api/contact", async (req, res) => {
       [name, email, subject, message],
       function (err) {
         if (err) {
-          console.error("Database error:", err);
+          console.error("Database error");
           return res
             .status(500)
             .json({ message: "Error inserting data into the database." });
@@ -77,7 +77,7 @@ app.post("/api/contact", async (req, res) => {
       }
     );
   } catch (error) {
-    console.error("Error:", error);
+    console.error("Error: Contact insertion failed.");
     res
       .status(500)
       .json({ message: "An error occurred while sending the message." });
