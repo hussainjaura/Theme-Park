@@ -2,10 +2,10 @@ import express from "express";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
-import router from "../Routes/route.js";
-import ejsRoutes from "../Routes/ejs.js";
-import contactdb from "../database/contact.js";
-import db from "../database/database.js";
+import router from "./Routes/route.js";
+import ejsRoutes from "./Routes/ejs.js";
+import contactdb from "./database/contact.js";
+import db from "./database/database.js";
 
 // to get file and directory name
 const __filename = fileURLToPath(import.meta.url);
@@ -24,17 +24,17 @@ app.use(express.json());
 
 // set view engine to ejs for server-side rendering
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "../views"));
+app.set("views", path.join(__dirname, "./views"));
 
 // serve static files from various folders
-app.use("/structure", express.static(path.join(__dirname, "../structure")));
-app.use("/styling", express.static(path.join(__dirname, "../styling")));
-app.use("/images", express.static(path.join(__dirname, "../images")));
-app.use("/logo", express.static(path.join(__dirname, "../logo")));
-app.use("/views", express.static(path.join(__dirname, "../views")));
-app.use("/app", express.static(path.join(__dirname, "../app")));
-app.use("/database", express.static(path.join(__dirname, "../database")));
-app.use("/favicon", express.static(path.join(__dirname, "../favicon")));
+app.use("/structure", express.static(path.join(__dirname, "./structure")));
+app.use("/styling", express.static(path.join(__dirname, "./styling")));
+app.use("/images", express.static(path.join(__dirname, "./images")));
+app.use("/logo", express.static(path.join(__dirname, "./logo")));
+app.use("/views", express.static(path.join(__dirname, "./views")));
+app.use("/app", express.static(path.join(__dirname, "./app")));
+app.use("/database", express.static(path.join(__dirname, "./database")));
+app.use("/favicon", express.static(path.join(__dirname, "./favicon")));
 
 // use main and ejs-specific routers
 app.use("/", router);
