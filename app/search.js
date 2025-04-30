@@ -1,52 +1,55 @@
 const searchResults = document.getElementById("search-results");
 const searchButton = document.getElementById("search-button");
 
-// Event listener for the search input field (to search as user types)
+// this is event listener for the search input field
 document.getElementById("search-input").addEventListener("input", (e) => {
   e.preventDefault();
 
-  // Hide ride cards and show search results while typing
+  // hide the ride cards and show search results while typing
   document.getElementById("ride-cards-div").style.display = "none";
   searchResults.style.display = "block";
 
-  searchRides(); // Call searchRides when user types something
+  searchRides();
 });
 
-// Event listener for the search button click
+// event listeners for the search button click
 searchButton.addEventListener("click", (e) => {
   e.preventDefault();
 
   const query = document.getElementById("search-input").value;
 
-  // Check if the input field is empty when search button is clicked
+  // checking if the input field is empty when search button is clicked
   if (!query.trim()) {
     document.getElementById("ride-cards-div").style.display = "block";
-    return; // Stop further processing
+    return; 
   }
 
-  searchRides(); // Call searchRides function when button is clicked
+  searchRides();
 });
 
 async function searchRides() {
-  // Dynamically get the query value when user types
+  // this gets the query value when user types
   const query = document.getElementById("search-input").value;
 
   try {
-    // Make sure the query isn't empty before fetching
+    // to make sure the query isn't empty before fetching
     if (!query.trim()) {
-      searchResults.innerHTML = ""; // Clear results if query is empty
+      searchResults.innerHTML = ""; 
       document.getElementById("ride-cards-div").style.display = "block";
       return;
     }
 
+    // to send get request to backend api to look for rides
     const response = await fetch(`/api/search?q=${encodeURIComponent(query)}`);
 
     if (!response.ok) {
       throw new Error("Ran into an issue while searching for rides");
     }
 
+    // usual parse json 
     const rides = await response.json();
 
+    // to handle case when no ride is found
     if (rides.length === 0 || rides === null || rides === undefined) {
       searchResults.innerHTML = "<p class='no-rides-found'>Sorry! We don't have any rides that match your search at the moment.</p>";
       return;
@@ -54,11 +57,11 @@ async function searchRides() {
 
     searchResults.innerHTML = "";
 
-    // Create a rides container div to maintain the flex layout
+
     const ridesContainer = document.createElement("div");
     ridesContainer.classList.add("rides-container");
 
-    // Display the results for each ride
+    // to display the results for each ride using forEach array method
     rides.forEach((ride) => {
       const rideSearchArea = document.createElement("div");
       rideSearchArea.innerHTML = `
@@ -81,7 +84,7 @@ async function searchRides() {
       ridesContainer.appendChild(rideSearchArea);
     });
 
-    // Append the rides container to the search results
+    // append the rides container to the search results
     searchResults.appendChild(ridesContainer);
   } catch (error) {
     console.error("Error searching rides:", error);

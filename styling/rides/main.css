@@ -11,6 +11,7 @@
     margin-bottom: 40px;
     color: #2964b1;
     font-family: 'Boldonse', fantasy;
+    /* to add 3d effects */
     text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
 }
 
@@ -27,6 +28,7 @@
     display: inline-block;
     position: relative;
     left: 50%;
+    /* to center align inline elements */
     transform: translateX(-50%);
 }
 
@@ -48,6 +50,7 @@
 }
 
 .search-bar input[type="text"]::placeholder {
+    /* this opeacity is used for visibility */
     opacity: 0.7;
 }
 
@@ -69,13 +72,16 @@
 
 .search-bar button:hover {
     background-color: #1e4c8a;
+    /* color transisiton */
     transition: all 0.3s ease;
 }
 
 .search-bar button:active {
+    /* press animation */
     transform: translateY(2px);
 }
 
+/* for smaler mobile sizes */
 @media (max-width: 600px) {
     .search-bar {
         margin-top: 50px;
@@ -93,6 +99,7 @@
     }
 }
 
+/* tablet view adjustments */
 @media (max-width: 1024px) and (min-width: 600px) {
     .search-bar {
         margin-top: 60px;
@@ -145,6 +152,7 @@
 }
 
 .search-results-div .area-card {
+    /* this is for 3 cards per row */
     flex: 0 1 33.333%;
     margin: 0;
     padding: 0;
@@ -179,6 +187,7 @@
 }
 
 .area-image-img:hover {
+    /* zoom effect on hover */
     transform: scale(1.05);
 }
 
@@ -222,7 +231,7 @@
     font-weight: 300;
     margin-top: auto;
 }
-
+/* responsiveness for card layout */
 @media (max-width: 1350px) {
     .rides-container {
         max-width: 900px;

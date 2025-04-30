@@ -21,6 +21,7 @@
 
 .info-cards {
     display: grid;
+    /* auto sizing for grid items */
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
     margin-top: 2rem;
@@ -33,11 +34,13 @@
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    /* to add border color */
     border: 2px solid #2964b1;
 }
 
 .info-card:hover {
-    transform: translateY(-5px);
+    /* when hover lift the card */
+    transform: translateY(-5px); 
 }
 
 .info-card .icon {
@@ -59,6 +62,7 @@
 }
 
 .contact-form {
+    /* grid layout for form fields */
     display: grid;
     gap: 1.5rem;
 }
@@ -103,22 +107,23 @@
     border: none;
     border-radius: 8px;
     font-size: 1.1rem;
+    /* when hover the pointer would have a hand on cursor movement */
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-    background: #1a4677;
+    background: #1a4677; /*lift effect on button when hovers and becomes dark blue*/
 }
 
 
 .popup-container {
-    position: fixed; /* Ensures it stays in place */
+    position: fixed; /* ensures it stays in place */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); 
+    /* background: rgba(0, 0, 0, 0.5); transparent overlay */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,6 +132,7 @@
 
 .popup-message {
     position: absolute;
+    /* positioned in center */
     align-items: center;
     justify-content: center;
     height: 25vh;
@@ -135,6 +141,7 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 2px solid #2964b1;
     padding: 2rem;
+    /* using flexbox to center content */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,6 +153,7 @@
     text-align: center;
     margin-top: 1.0rem;
     margin-bottom: 1rem;
+    /* custom google font */
     font-family: 'Ubuntu', sans-serif;
     color: #333;
 }
@@ -181,11 +189,13 @@
     margin-bottom: 40px;
     color: #2964b1;
     font-family: 'Boldonse', fantasy;
-    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5);
+    /* shaddow effect for cool layout */
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.5); 
 }
 
 .location-container {
     display: grid;
+    /* two columns grid layout */
     grid-template-columns: 1fr 1fr;
     gap: 0;
     max-width: 1200px;
@@ -205,6 +215,7 @@
     background-color: white;
     padding: 2rem;
     padding-left: 4rem;
+    /* shaddow effect for depth */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border: 1px solid black;
     border-top: none;
@@ -213,7 +224,8 @@
 }
 
 .location-info .location-div:last-child {
-    border-bottom: none;
+    /* no bottom border for last item */
+    border-bottom: none; 
 }
 
 
@@ -246,6 +258,7 @@
 
 .faq-flex {
     display: flex;
+    /* to stack vertically */
     flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
@@ -320,7 +333,7 @@
     color: #2964b1;
     margin-bottom: 1rem;
 }
-
+/* media queries for responsive design for smaller screens */
 @media (max-width: 600px) {
     .faq-item {
       flex-direction: column;
@@ -430,7 +443,7 @@
     margin-left: 2rem;
 }
 
-
+/* responsive design for medium sized screens */
 @media (max-width: 968px) {
     .contact-grid,
     .location-container {

@@ -1,6 +1,7 @@
 
 .faq-section {
     padding: 50px 20px;
+    /* max width to avoid stretching to much */
     max-width: 1200px;
     margin: 0 auto;
     margin-top: 60px;
@@ -8,11 +9,13 @@
 
 .faq-container {
     display: grid;
+    /* to add space between grid items */
     gap: 30px;
 }
 
 .faq-item {
     background: white;
+    /* hide content that overflows */
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
@@ -27,6 +30,7 @@
     background: #205781;
     color: white;
     display: flex;
+    /* to add space between question and icon */
     justify-content: space-between;
     align-items: center;
 }
@@ -52,6 +56,7 @@
     color: #333;
 }
 
+/* responsiveness for smaller screen */
 @media (max-width: 768px) {
     .faq-hero h1 {
         font-size: 2rem;

@@ -6,16 +6,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Jaura's Theme Park Events</title>
-  <link rel="stylesheet" href="/styling/events/events.css">
+  <link rel="stylesheet" href="../styling/events/events.css" >
+  <link rel="preconnect" href="https://fonts.googleapis.com" >
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin >
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boldonse&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Boldonse&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Boldonse&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Boldonse&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
   <link rel="icon" type="image/png" href="../favicon/favicon.png" sizes="32x32">
 </head>
 
@@ -24,7 +30,7 @@
   <!-- this would be used in all pages just like newsletter and footer -->
   <nav class="navbar">
     <div class="nav-brand">
-      <img src="/logo/The_Jaura's.png" alt="logo" class="logo">
+      <img src="../logo/The_Jaura’s.png" alt="logo" class="logo">
     </div>
     <ul class="nav-links">
       <li><a href="/">Attractions</a></li>
@@ -46,18 +52,19 @@
     <!-- this is the featured event section that contains the featured event card -->
     <section class="featured-event">
       <div class="event-content">
-        <h2>Summer Spectacular 2025</h2>
+        <h2>
+          <%= thisYearEvents[0].title %>
+        </h2>
         <p>
-          Experience our biggest summer celebration yet with extended park
-          hours, dazzling night shows, and exclusive performances!
+          <%= thisYearEvents[0].description %>
         </p>
         <div class="event-details">
-          <span class="date">June 1 - August 31, 2025</span>
+          <span class="date"><%= thisYearEvents[0].date %></span>
           <button class="book-button">Book Now</button>
         </div>
       </div>
       <div class="event-image">
-        <img src="/images/events/realSummer.jpg" alt="Summer Spectacular" loading="lazy">
+        <img src="<%= thisYearEvents[0].image_url %>" alt="Summer Spectacular" loading="lazy">
       </div>
     </section>
 
@@ -68,15 +75,14 @@
       <div class="events-grid">
         <div class="event-card spring">
           <div class="event-image">
-            <img src="/images/events/spring.jpg" alt="Spring Bloom Festival" loading="lazy">
+            <img src="<%= thisYearEvents[1].image_url %>" alt="Spring Bloom Festival" loading="lazy">
           </div>
           <div class="event-info">
-            <h3>Spring Bloom Festival</h3>
+            <h3>
+              <%= thisYearEvents[1].title %>
+            </h3>
             <p>
-              Celebrate the colors of spring with our magical garden displays,
-              flower-themed treats, and special botanical shows. Meet our
-              garden fairies and participate in interactive planting
-              workshops.
+              <%= thisYearEvents[1].description %>
             </p>
             <ul class="event-highlights">
               <li>Enchanted Garden Tours</li>
@@ -85,7 +91,7 @@
               <li>Special Spring Menu Items</li>
             </ul>
             <div class="event-footer">
-              <span class="date">March 15 - May 1, 2025</span>
+              <span class="date"><%= thisYearEvents[1].date %></span>
               <button class="learn-more">Learn More</button>
             </div>
           </div>
@@ -93,14 +99,14 @@
 
         <div class="event-card summer">
           <div class="event-image">
-            <img src="/images/events/summer.jpg" alt="Summer Water Carnival" loading="lazy">
+            <img src="<%= thisYearEvents[2].image_url %>" alt="Summer Water Carnival" loading="lazy">
           </div>
           <div class="event-info">
-            <h3>Summer Water Carnival</h3>
+            <h3>
+              <%= thisYearEvents[2].title %>
+            </h3>
             <p>
-              Beat the heat with our spectacular water shows, splash zones,
-              and refreshing entertainment. Experience water-based
-              performances and cool off in our special summer attractions.
+              <%= thisYearEvents[2].description %>
             </p>
             <ul class="event-highlights">
               <li>Water Acrobatics Show</li>
@@ -109,7 +115,7 @@
               <li>Tropical Food Festival</li>
             </ul>
             <div class="event-footer">
-              <span class="date">July 1 - August 31, 2025</span>
+              <span class="date"><%= thisYearEvents[2].date %></span>
               <button class="learn-more">Learn More</button>
             </div>
           </div>
@@ -117,15 +123,14 @@
 
         <div class="event-card halloween">
           <div class="event-image">
-            <img src="/images/events/halloween.jpg" alt="Halloween Nights" loading="lazy">
+            <img src="<%= thisYearEvents[3].image_url %>" alt="Halloween Nights" loading="lazy">
           </div>
           <div class="event-info">
-            <h3>Halloween Nights</h3>
+            <h3>
+              <%= thisYearEvents[3].title %>
+            </h3>
             <p>
-              Experience spooky-but-friendly fun during our annual Halloween
-              celebration. The park transforms with themed decorations,
-              special character appearances, and not-so-scary adventures for
-              all ages.
+              <%= thisYearEvents[3].description %>
             </p>
             <ul class="event-highlights">
               <li>Trick-or-Treat Trails</li>
@@ -134,7 +139,7 @@
               <li>Themed Ride Experiences</li>
             </ul>
             <div class="event-footer">
-              <span class="date">October 1 - 31, 2025</span>
+              <span class="date"><%= thisYearEvents[3].date %></span>
               <button class="learn-more">Learn More</button>
             </div>
           </div>
@@ -142,15 +147,14 @@
 
         <div class="event-card winter">
           <div class="event-image">
-            <img src="/images/events/winter.jpg" alt="Winter Wonderland" loading="lazy">
+            <img src="<%= thisYearEvents[4].image_url %>" alt="Winter Wonderland" loading="lazy">
           </div>
           <div class="event-info">
-            <h3>Winter Wonderland</h3>
+            <h3>
+              <%= thisYearEvents[4].title %>
+            </h3>
             <p>
-              Immerse yourself in a magical winter experience with
-              snow-covered landscapes, festive shows, and holiday
-              celebrations. Meet Santa and enjoy special seasonal treats and
-              activities.
+              <%= thisYearEvents[4].description %>
             </p>
             <ul class="event-highlights">
               <li>Santa's Workshop</li>
@@ -159,7 +163,7 @@
               <li>Christmas Market</li>
             </ul>
             <div class="event-footer">
-              <span class="date">December 1, 2025 - January 5, 2026</span>
+              <span class="date"><%= thisYearEvents[4].date %></span>
               <button class="learn-more">Learn More</button>
             </div>
           </div>
@@ -167,15 +171,14 @@
 
         <div class="event-card summer-nights">
           <div class="event-image">
-            <img src="/images/events/night.jpg" alt="Summer Night Festival" loading="lazy">
+            <img src="<%= thisYearEvents[5].image_url %>" alt="Summer Night Festival" loading="lazy">
           </div>
           <div class="event-info">
-            <h3>Summer Night Festival</h3>
+            <h3>
+              <%= thisYearEvents[5].title %>
+            </h3>
             <p>
-              Experience the magic of warm summer nights with extended evening
-              hours, spectacular light shows, and special nighttime
-              entertainment. The park transforms after dark with glowing
-              attractions and magical performances.
+              <%= thisYearEvents[5].description %>
             </p>
             <ul class="event-highlights">
               <li>Illuminated Parade</li>
@@ -184,7 +187,7 @@
               <li>Night Ride Experiences</li>
             </ul>
             <div class="event-footer">
-              <span class="date">July 15 - September 5, 2025</span>
+              <span class="date"><%= thisYearEvents[5].date %></span>
               <button class="learn-more">Learn More</button>
             </div>
           </div>
@@ -192,15 +195,14 @@
 
         <div class="event-card autumn-harvest">
           <div class="event-image">
-            <img src="/images/events/autumn.jpg" alt="Autumn Harvest Festival" loading="lazy">
+            <img src="<%= thisYearEvents[6].image_url %>" alt="Autumn Harvest Festival" loading="lazy">
           </div>
           <div class="event-info">
-            <h3>Autumn Harvest Festival</h3>
+            <h3>
+              <%= thisYearEvents[6].title %>
+            </h3>
             <p>
-              Celebrate the fall season with our special harvest festivities.
-              Enjoy seasonal treats, autumn-themed attractions, and
-              family-friendly activities amidst beautiful fall decorations
-              throughout the park.
+              <%= thisYearEvents[6].description %>
             </p>
             <ul class="event-highlights">
               <li>Pumpkin Carving Workshops</li>
@@ -209,7 +211,7 @@
               <li>Fall Photography Sessions</li>
             </ul>
             <div class="event-footer">
-              <span class="date">September 15 - October 31, 2025</span>
+              <span class="date"><%= thisYearEvents[6].date %></span>
               <button class="learn-more">Learn More</button>
             </div>
           </div>
@@ -218,40 +220,43 @@
     </section>
 
     <!-- this will be the area where the previous events will be displayed -->
-    <!-- Replace the existing previous-events section with this -->
     <section class="previous-events">
       <h2>Previous Events</h2>
       <div class="previous-events-div">
         <!-- here is the dropdown for the previous event -->
-         <div class="previous-event-dropdown-div">
+        <div class="previous-event-dropdown-div">
           <div class="previous-event-dropdown">
             <select id="previous-event-options">
-              <option value="option1">Choose an event</option>
-              <option value="option2">Concert Series</option>
-              <option value="option3">Cultural Festival</option>
-              <option value="option4">Seasonal Events</option>
+              <option value="choose-event">Choose an event</option>
+              <option value="concert-series">Concert Series</option>
+              <option value="cultural-festival">Cultural Festival</option>
+              <option value="seasonal-events">Seasonal Events</option>
+              <option value="2024-events">2024</option>
+              <option value="2023-events">2023</option>
+              <option value="2022-events">2022</option>
+              <option value="2021-events">2021</option>
+              <option value="2020-events">2020</option>
+              <option value="2019-events">2019</option>
             </select>
           </div>
-         </div>
-        <div class="previous-event-card">
-          <div class="event-image">
-            <img src="/images/prevEvents/pexels-sam-fire-64795-230895.jpg" alt="Summer Spectacular 2024"
-              loading="lazy">
-          </div>
-
-          <div class="previous-event-content">
-            <h3>Summer Spectacular 2022</h3>
-            <p>
-              Our biggest summer celebration featured extended park hours,
-              dazzling night shows, and exclusive performances that amazed
-              thousands of visitors.
-            </p>
-            <div class="event-highlights-past">
-              <span class="date">June 1 - August 31, 2022</span>
-              <span class="attendance">25,000+ Attendees</span>
+        </div>
+        <div class="previous-events-cards-div">
+          <% previousEvents.forEach(event => { %>
+            <div class="previous-event-card" data-event-id="<%= event.id %>">
+              <div class="event-image">
+                <img src="<%= event.image_url %>" alt="<%= event.title %>" loading="lazy">
+              </div>
+              <div class="previous-event-content">
+                <h3><%= event.title %></h3>
+                <p><%= event.paragraph %></p>
+                <div class="event-highlights-past">
+                  <span class="date"><%= event.date %></span>
+                  <span class="attendance"><%= event.amount %>+ Attendees</span>
+                </div>
+                <button class="view-gallery">View Gallery</button>
+              </div>
             </div>
-            <button class="view-gallery">View Gallery</button>
-          </div>
+          <% }) %>
         </div>
       </div>
     </section>
@@ -295,7 +300,7 @@
     <section class="newsletter">
       <h2>Stay Updated</h2>
       <p>Subscribe to our newsletter for exclusive offers and updates!</p>
-      <form class="signup-form">
+      <form class="signup-form" name="signup-form">
         <input type="email" placeholder="Enter your email">
         <button type="submit">Subscribe</button>
       </form>
@@ -333,6 +338,7 @@
       <p>&copy; 2024 The Jaura's Theme Park. All rights reserved.</p>
     </div>
   </footer>
+  <script src="../app/events.js"></script>
 </body>
 
 </html>

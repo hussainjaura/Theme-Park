@@ -45,7 +45,7 @@ router.get('/events', (req, res) => {
             }
             
             // Render the template with both sets of data
-            res.render("main-events", { 
+            res.render("events", { 
                 thisYearEvents: thisYearRows,
                 previousEvents: prevRows 
             });

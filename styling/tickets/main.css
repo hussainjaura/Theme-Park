@@ -1,7 +1,8 @@
 .ticket-start {
     padding: 2rem;
-    padding-top: 4rem;
+    padding-top: 1rem;
     padding-bottom: 4rem;
+    /* full screen view port width */
     width: 100vw;
     display: inline-block;
     position: relative;
@@ -14,6 +15,7 @@
     font-size: 2.5rem;
     margin-bottom: 1rem;
     font-family: 'Boldonse', fantasy;
+    /* to add 3d effect */
     text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.664);
 }
 
@@ -34,9 +36,11 @@
     justify-content: center;
     gap: 0;
     padding: 2rem;
+    /* to allow wrapping on smaller screens */
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    /* background color to sky blue */
     background-color: skyblue;
 }
 
@@ -70,7 +74,9 @@
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
+    /* setting linear gradient */
     background: linear-gradient(to right, #2964b1, #64b5f6);
+    /* to add little round */
     border-radius: 2px;
 }
 
@@ -80,6 +86,7 @@
 
 .price .amount {
     font-size: 2.5rem;
+    /* font size bold */
     font-weight: bold;
     color: black;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
@@ -148,6 +155,7 @@
 .annual-div,
 .group-div,
 .vip-div {
+    /* to add display grid */
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
