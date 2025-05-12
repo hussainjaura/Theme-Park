@@ -6,6 +6,10 @@ import router from "./Routes/route.js";
 import ejsRoutes from "./Routes/ejs.js";
 import contactdb from "./database/contact.js";
 import db from "./database/database.js";
+import dotenv from "dotenv";
+
+// configured dotenv to load environment variables from the .env file
+dotenv.config();
 
 // to get file and directory name
 const __filename = fileURLToPath(import.meta.url);
@@ -13,7 +17,7 @@ const __dirname = path.dirname(__filename);
 
 // to initialize express app and define port
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // this is middleware to handle form data
 app.use(express.urlencoded({ extended: true }));
