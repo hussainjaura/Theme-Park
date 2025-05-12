@@ -1,4 +1,5 @@
-import sqlite from "sqlite";
+import { open } from "sqlite";
+import sqlite3 from "sqlite3";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -10,13 +11,16 @@ const __dirname = path.dirname(__filename);
 const dbPath = path.join(__dirname, "theme.db");
 
 // open the SQLite database
-const db = await sqlite.open(dbPath);
+const db = await open({
+  filename: dbPath,
+  driver: sqlite3.Database,
+});
 
 // to execute a query to fetch all data from the attractions table
 const fetchAttractions = async () => {
   try {
     const rows = await db.all("SELECT * FROM attractions");
-    console.log("attractions data fetched successfully:", rows);
+    console.log("Attractions data fetched successfully:", rows);
   } catch (err) {
     console.error("Error fetching attractions:", err);
   }

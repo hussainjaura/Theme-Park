@@ -1,4 +1,5 @@
-import sqlite from "sqlite";
+import { open } from "sqlite";
+import sqlite3 from "sqlite3";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -10,7 +11,10 @@ const __dirname = path.dirname(__filename);
 const dbPath = path.join(__dirname, "theme.db");
 
 // open the SQLite database
-const contactdb = await sqlite.open(dbPath);
+const contactdb = await open({
+  filename: dbPath,
+  driver: sqlite3.Database,
+});
 
 // create a contact table if it doesn't exist
 const createContactTable = async () => {
