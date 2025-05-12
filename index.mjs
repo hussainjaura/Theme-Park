@@ -17,7 +17,7 @@ const __dirname = path.dirname(__filename);
 
 // to initialize express app and define port
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // this is middleware to handle form data
 app.use(express.urlencoded({ extended: true }));
@@ -99,6 +99,6 @@ app.use((req, res) => {
 });
 
 // start the server with port 3000
-app.listen(port, "0.0.0.0", () => {
-  console.log(`server is running on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`server is running on port ${PORT}`);
 });
