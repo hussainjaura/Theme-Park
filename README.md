@@ -197,11 +197,11 @@ All API endpoints follow RESTful design principles, making backend interactions 
 
 ## Contribute to my Website:
 
-- 1. Fork the repo
-- 2. Create a new branch ('git checkout -b feature-branch')
-- 3. Make your changes
-- 4. Push to the branch ('git push origin feature-branch')
-- 5. Open a pull request
+- Fork the repo
+- Create a new branch ('git checkout -b feature-branch')
+- Make your changes
+- Push to the branch ('git push origin feature-branch')
+- Open a pull request
 
 ## Contact:
 
