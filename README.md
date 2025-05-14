@@ -25,7 +25,7 @@ The following npm packages are required to run this project:
 5. **nodemon** – Automatically restarts the server on code changes during development.
 6. **cors** – Middleware to enable Cross-Origin Resource Sharing.
 
-## Technologies Used
+## Technologies Used:
 
 - HTML5
 - CSS
@@ -121,6 +121,18 @@ To enhance user engagement and incentivize ticket purchases, the site includes a
 - The feature includes a popup system to show the results and a congratulatory container with styling for a premium experience.
 - All elements are mobile-friendly and integrated seamlessly with the site's visual theme.
 
+### 9. Custom 404 Error Page
+
+To ensure a smooth and user-friendly experience even when users land on non-existent pages, a custom 404 error page has been implemented.
+
+#### Features:
+
+- Consistent Branding: Matches the overall site theme, including the logo, navigation bar, and footer.
+- Helpful Messaging: Displays a clear error message using EJS variables (<%= title %>, <%= message %>, and <%= description %>).
+- Navigation Links: Provides quick-access buttons back to Attractions, Rides, Tickets, and Events.
+- Helpful Suggestions: Encourages users to use the ride search feature or visit the Contact Us page for assistance.
+- Newsletter & Footer: Maintains the global newsletter subscription form and footer across the site, even on the 404 page.
+
 ## Styling:
 
 The website uses a blue, white, and black color scheme to maintain a clean and modern look. The CSS is designed to be responsive, ensuring the site works across a variety of screen sizes and devices. Some key styling features include:
@@ -135,13 +147,15 @@ The website uses a blue, white, and black color scheme to maintain a clean and m
 Includes a subscription form for the newsletter, contact details, and links to social media profiles (Facebook, Instagram, Twitter).
 
 At the bottom of every page, the footer provides:
-Contact Information:
-Phone: 0783564738
-Email: thejauras@gmail.com
-Address: 123 Theme Park Way, Southampton, FC 12345
-Social Media Links: Facebook, Instagram, Twitter
-Quick Links: Park Map, Safety Guidelines, FAQs, Career Opportunities
-Copyright Information: © 2024 The Jaura's Theme Park. All rights reserved.
+
+#### Contact Information:
+
+- Phone: 0783564738
+- Email: thejauras@gmail.com
+- Address: 123 Theme Park Way, Southampton, FC 12345
+- Social Media Links: Facebook, Instagram, Twitter
+- Quick Links: Park Map, Safety Guidelines, FAQs, Career Opportunities
+- Copyright Information: © 2024 The Jaura's Theme Park. All rights reserved.
 
 ## Code Quality and Best Practices:
 
