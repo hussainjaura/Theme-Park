@@ -6,9 +6,9 @@ import router from "./Routes/route.js";
 import ejsRoutes from "./Routes/ejs.js";
 import contactdb from "./database/contact.js";
 import db from "./database/database.js";
-import dotenv from dotenv;
+import dotenv from "dotenv";
 
-// to configure env to be used in code
+//to configure environment variables
 dotenv.config();
 
 // to get file and directory name
