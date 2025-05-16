@@ -4,6 +4,11 @@
 
 This is a fully functional, responsive theme park website built using HTML, CSS, JavaScript, EJS, Express and Node.js. This project was assigned to me as a University assesment for my 'Web Technologies' Module so that is why I made it. It includes multiple pages, interactive features, AJAX integration, and database-driven content using SQLite3. It was created as part of an academic assessment, fulfilling 100% of the brief and grading criteria, including advanced AJAX features and accessibility compliance.
 
+## Deployed App:
+
+The Jaura's Theme Park Web Application is deployed under the 'Render' platform, feel free to visit the following url and check my internship project out: https://jaura-theme-park.onrender.com
+Note: Images are not rendered on free version of 'Render' platform.
+
 ## How to open project at your local machine:
 
 1. First step is to clone this repository to your local folder in any Integrated Development Environment.
