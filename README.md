@@ -7,7 +7,7 @@ This is a fully functional, responsive theme park website built using HTML, CSS,
 ## Deployed App:
 
 The Jaura's Theme Park Web Application is deployed under the 'Render' platform, feel free to visit the following url and check my internship project out: https://jaura-theme-park.onrender.com
-Note: Images are not rendered on free version of 'Render' platform.
+- Note: Images are not rendered on free version of 'Render' platform.
 
 ## How to open project at your local machine:
 
