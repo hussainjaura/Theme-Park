@@ -131,7 +131,7 @@
 
 .search-results-div {
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .no-rides-found {
@@ -331,8 +331,17 @@
         font-size: 1.1rem;
         padding: 0 20px;
     }
+
+    .area-content p{
+        padding-right: 10%;
+    }
 }
 
+@media (max-width: 390px){
+    .area-content p{
+        padding-right: 15%;
+    }
+}
 
 .special-experiences {
     width: 100%;

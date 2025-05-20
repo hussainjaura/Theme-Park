@@ -376,6 +376,25 @@
     transition: transform 0.3s ease-in-out;
 }
 
+@media (max-width: 450px) {
+    .park-info-section{
+        height: 100%;
+        width: 80%;
+    }
+
+    .attraction-card img {
+        width: 80%;
+    }
+
+    .attraction-card p {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    }
+
+}
+
 .park-info-section h3 {
     color: #fff;
     font-size: 1.8rem;
