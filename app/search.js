@@ -21,7 +21,7 @@ searchButton.addEventListener("click", (e) => {
   // checking if the input field is empty when search button is clicked
   if (!query.trim()) {
     document.getElementById("ride-cards-div").style.display = "block";
-    return; 
+    return;
   }
 
   searchRides();
@@ -34,7 +34,7 @@ async function searchRides() {
   try {
     // to make sure the query isn't empty before fetching
     if (!query.trim()) {
-      searchResults.innerHTML = ""; 
+      searchResults.innerHTML = "";
       document.getElementById("ride-cards-div").style.display = "block";
       return;
     }
@@ -46,17 +46,17 @@ async function searchRides() {
       throw new Error("Ran into an issue while searching for rides");
     }
 
-    // usual parse json 
+    // usual parse json
     const rides = await response.json();
 
     // to handle case when no ride is found
     if (rides.length === 0 || rides === null || rides === undefined) {
-      searchResults.innerHTML = "<p class='no-rides-found'>Sorry! We don't have any rides that match your search at the moment.</p>";
+      searchResults.innerHTML =
+        "<p class='no-rides-found'>Sorry! We don't have any rides that match your search at the moment.</p>";
       return;
     }
 
     searchResults.innerHTML = "";
-
 
     const ridesContainer = document.createElement("div");
     ridesContainer.classList.add("rides-container");
@@ -71,7 +71,7 @@ async function searchRides() {
             </div>
             <div class="area-content">
                 <h3>${ride.title}</h3>
-                <p>${ride.intro}</p>
+                <p style="padding-right: 30%;">${ride.intro}</p>
                 <ul class="area-highlights">
                     <li>${ride.info1}</li>
                     <li>${ride.info2}</li>
